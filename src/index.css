@@ -16,13 +16,4 @@
     background: rgba(var(--background));
 }
 
-.light{
-    --background: 255, 255, 255;
-    --border: 53, 53, 53;
-    --card: 20, 20, 20;
-    --text-heading: 255, 255, 255;
-    --text-description: 193, 193, 193;
-    --custom-gradient: linear-gradient(125.81deg, #1E1E1E 4.31%, #1D1D1D 22.95%, #1C1C1C 41.59%, #1B1B1B 60.23%, #1A1A1A 79.24%, #191919 97.5%);
-    --nav-text-hover: 15, 6, 21;
-    background: rgba(var(--background));
-}
+
