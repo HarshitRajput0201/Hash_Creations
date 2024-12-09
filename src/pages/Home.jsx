@@ -1,4 +1,5 @@
 import CTAButton from "../component/CTAButton";
+import ImgSlider from "../component/ImgSlider";
 import NavBar from "../component/NavBar";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -20,8 +21,9 @@ const Home = () => {
             </CTAButton>
           </div>
         </div>
-          
-        
+        <div className="w-full flex justify-center items-center">
+          <ImgSlider/>
+        </div>
     </div>
   )
 }
