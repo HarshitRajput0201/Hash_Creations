@@ -1,4 +1,4 @@
-import sliderImgData from '../data/SliderImgData';
+import sliderImgData from '../data/SliderImgData.js';
 import '../App.css';
 
 

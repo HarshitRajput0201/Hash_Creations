@@ -44,47 +44,7 @@ const sliderImgData = [
       id: 8,
       url: SliderImg_4,
       alt: "Image 4 Description",
-    },
-    // {
-    //   id: 9,
-    //   url: SliderImg_1,
-    //   alt: "Image 1 Description",
-    // },
-    // {
-    //   id: 10,
-    //   url: SliderImg_2,
-    //   alt: "Image 2 Description",
-    // },
-    // {
-    //   id: 11,
-    //   url: SliderImg_3,
-    //   alt: "Image 3 Description",
-    // },
-    // {
-    //   id: 12,
-    //   url: SliderImg_4,
-    //   alt: "Image 4 Description",
-    // },
-    // {
-    //   id: 13,
-    //   url: SliderImg_1,
-    //   alt: "Image 1 Description",
-    // },
-    // {
-    //   id: 14,
-    //   url: SliderImg_2,
-    //   alt: "Image 2 Description",
-    // },
-    // {
-    //   id: 15,
-    //   url: SliderImg_3,
-    //   alt: "Image 3 Description",
-    // },
-    // {
-    //   id: 16,
-    //   url: SliderImg_4,
-    //   alt: "Image 4 Description",
-    // }
+    }
   ];
   
   export default sliderImgData;
