@@ -14,6 +14,8 @@ export default {
         description: "rgba(var(--text-description))",
         navhover: 'rgba(var(--nav-text-hover))',
         accentgreen: 'rgba(var(--accent-green))',
+        accentpurple: 'rgba(var(--accent-purple))',
+        
       },
       backgroundImage: {
         'CTA-bg': 'linear-gradient(102.88deg, #8356FB 5.35%, #946CFF 43.55%, #7953DF 85.78%)',

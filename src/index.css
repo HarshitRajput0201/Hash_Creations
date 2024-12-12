@@ -11,10 +11,12 @@
     --card: 20, 20, 20;
     --service-card: 17, 17, 17;
     --text-heading: 255, 255, 255;
-    --text-description: 193, 193, 193;
+    --text-description: 173, 173, 173;
     --custom-gradient: linear-gradient(125.81deg, #1E1E1E 4.31%, #1D1D1D 22.95%, #1C1C1C 41.59%, #1B1B1B 60.23%, #1A1A1A 79.24%, #191919 97.5%);
     --nav-text-hover: 131, 86, 251;
     --accent-green: 128, 255, 96;
+    --accent-purple: 148, 108, 255;
+
 
     background: rgba(var(--background));
 }
