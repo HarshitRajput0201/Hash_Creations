@@ -1,26 +1,33 @@
+import PortfolioCardImg1 from "../assets/PortfolioCardImg1.png";
+import PortfolioCardImg2 from "../assets/PortfolioCardImg2.png";
+import PortfolioCardImg3 from "../assets/PortfolioCardImg3.png";
+import PortfolioCardImg4 from "../assets/PortfolioCardImg4.png";
+
+
+
 const PortfolioData = [
     {
       name: "E-commerce Website",
-      description: "A full-stack e-commerce platform with features like product browsing, cart management, and payment gateway integration.",
-      imageURL: "https://via.placeholder.com/150",
+      description: "A full-stack ",
+      imageURL: PortfolioCardImg1,
       pageLink: "https://demo-ecommerce.com"
     },
     {
       name: "Personal Blog",
-      description: "A responsive blog website built with React and Node.js, featuring user authentication and a content management system.",
-      imageURL: "https://via.placeholder.com/150",
+      description: "A responsive ",
+      imageURL: PortfolioCardImg2,
       pageLink: "https://demo-blog.com"
     },
     {
       name: "Portfolio Website",
-      description: "A portfolio showcasing my projects and skills, designed with modern UI/UX principles.",
-      imageURL: "https://via.placeholder.com/150",
+      description: "A portfolio ",
+      imageURL: PortfolioCardImg3,
       pageLink: "https://demo-portfolio.com"
     },
     {
       name: "Weather App",
-      description: "A web application that fetches real-time weather data using OpenWeatherMap API and displays it in a user-friendly interface.",
-      imageURL: "https://via.placeholder.com/150",
+      description: "A web application ",
+      imageURL: PortfolioCardImg4,
       pageLink: "https://demo-weatherapp.com"
     }
   ];

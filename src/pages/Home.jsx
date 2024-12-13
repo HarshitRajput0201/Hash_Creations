@@ -11,6 +11,15 @@ import HeadingBlock from "../component/HeadingBlock.jsx";
 import { RiBox3Fill } from "react-icons/ri";
 import { FaPeopleGroup } from "react-icons/fa6";
 import WorkImage from "../assets/WorkImage.png";
+import PortfolioCard from "../component/PortfolioCard.jsx";
+import PortfolioData from "../data/PortfolioData.js";
+import AgencyIcon1 from "../assets/AgencyIcon1.svg";
+import AgencyIcon2 from "../assets/AgencyIcon2.svg";
+import AgencyIcon3 from "../assets/AgencyIcon3.svg";
+import AgencyIcon4 from "../assets/AgencyIcon4.svg";
+
+
+
 
 const Home = () => {
   return (
@@ -42,9 +51,9 @@ const Home = () => {
           <HeadingBlock badgeheading={"OUR SERVICES"} mainheading={"Explore Our Core"} mainspan={"Services"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
           <ServiceCards />
         </div>
-        <div className="w-full flex justify-center items-center my-24">
+        <div className="w-full flex justify-center my-24">
           <div className="w-10/12 flex flex-row justify-between items-center gap-10 ">
-            <div className="w-[50%] flex flex-col justify-between items-center gap-12">
+            <div className="w-[50%] h-full flex flex-col justify-between items-center gap-12">
               <div className="w-full flex flex-col justify-between items-start gap-6">
                 <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-accentpurple rounded-lg text-white text-sm">
                   <div><RiBox3Fill /></div>
@@ -74,14 +83,75 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[50%] flex justify-center items-center rounded-3xl overflow-hidden ">
-              <img className="object-cover" src={WorkImage} alt="" />
+            <div className="w-[50%] h-full flex justify-center items-center rounded-3xl overflow-hidden ">
+              <img className="w-full" src={WorkImage} alt="" />
             </div>
           </div>
         </div>
         <div className="w-full flex flex-col justify-between items-center gap-20 my-24">
           <HeadingBlock badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
-          <div></div>
+          <div className="w-10/12 grid grid-cols-2 gap-5">
+            {
+              PortfolioData.map((cardData, index) => (
+                <PortfolioCard imageURL={cardData.imageURL} cardName={cardData.name} cardDescription={cardData.description} cardLink={cardData.pageLink} key={index} />
+              ))
+            }        
+          </div>
+        </div>
+        <div className="w-full flex justify-center my-24">
+          <div className="w-10/12 flex flex-row justify-between items-center gap-10 ">
+            <div className="w-[50%] h-full flex justify-center items-center rounded-3xl overflow-hidden ">
+              <img className="w-full h-full object-cover" src={WorkImage} alt="" />
+            </div>
+            <div className="w-[50%] h-full flex flex-col justify-between items-center gap-12">
+              <div className="w-full flex flex-col justify-between items-start gap-6">
+                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-nav-bg rounded-lg text-accentgreen text-sm">
+                  <RiBox3Fill />
+                  <p>OUR WORK</p>
+                </div>
+                <div className="flex flex-col justify-between items-start gap-3">
+                  <p className="text-4xl font-semibold">What’s Different In Our Agency</p>
+                  <p className="font-bodyfont text-[18px] text-description">Delivering web, app, and design solutions that empower your brand and captivate your audience.</p>
+                </div> 
+              </div>
+              <div className="w-full grid grid-cols-2 gap-4">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                  <div className="flex justify-center items-center"><img src={AgencyIcon1} alt="" /></div>
+                  <div className="flex flex-col justify-between items-start gap-1">
+                    <p className="font-semibold text-lg">Responsive</p>
+                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                  <div className="flex justify-center items-center"><img src={AgencyIcon2} alt="" /></div>
+                  <div className="flex flex-col justify-between items-start gap-1">
+                    <p className="font-semibold text-lg">Responsive</p>
+                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                  <div className="flex justify-center items-center"><img src={AgencyIcon3} alt="" /></div>
+                  <div className="flex flex-col justify-between items-start gap-1">
+                    <p className="font-semibold text-lg">Responsive</p>
+                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                  <div className="flex justify-center items-center"><img src={AgencyIcon4} alt="" /></div>
+                  <div className="flex flex-col justify-between items-start gap-1">
+                    <p className="font-semibold text-lg">Responsive</p>
+                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex flex-col justify-between items-center gap-20 my-24">
+          <HeadingBlock badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
+          <div className="w-10/12 h-[800px] flex flex-row justify-between items-center">
+            
+          </div>
         </div>
       </div>
     </div>
