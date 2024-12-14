@@ -17,6 +17,8 @@ import AgencyIcon1 from "../assets/AgencyIcon1.svg";
 import AgencyIcon2 from "../assets/AgencyIcon2.svg";
 import AgencyIcon3 from "../assets/AgencyIcon3.svg";
 import AgencyIcon4 from "../assets/AgencyIcon4.svg";
+import TestimonialBlock from "../component/TestimonialBlock.jsx";
+import TestimonialsData from "../data/TestimonialsData.js";
 
 
 
@@ -65,19 +67,19 @@ const Home = () => {
                 </div> 
               </div>
               <div className="w-full grid grid-cols-2 gap-4">
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6" /></div>
                   <div>Responsive and Mobile-First Design</div>
                 </div>
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6" /></div>
                   <div className="flex flex-wrap">Responsive and Mobile-First Design</div>
                 </div>
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6" /></div>
                   <div>Responsive and Mobile-First Design</div>
                 </div>
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6" /></div>
                   <div>Responsive and Mobile-First Design</div>
                 </div>
@@ -115,28 +117,28 @@ const Home = () => {
                 </div> 
               </div>
               <div className="w-full grid grid-cols-2 gap-4">
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center"><img src={AgencyIcon1} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg">Responsive</p>
                     <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center"><img src={AgencyIcon2} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg">Responsive</p>
                     <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center"><img src={AgencyIcon3} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg">Responsive</p>
                     <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-nav-bg rounded-2xl border border-border">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border">
                   <div className="flex justify-center items-center"><img src={AgencyIcon4} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg">Responsive</p>
@@ -149,8 +151,10 @@ const Home = () => {
         </div>
         <div className="w-full flex flex-col justify-between items-center gap-20 my-24">
           <HeadingBlock badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
-          <div className="w-10/12 h-[800px] flex flex-row justify-between items-center">
-            
+          <div className="TestimonialsDiv w-10/12 h-[800px] flex flex-row justify-between items-center gap-5 overflow-hidden">
+            <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
+            <TestimonialBlock TestimonialsData={TestimonialsData} direction="up"/>
+            <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
           </div>
         </div>
       </div>

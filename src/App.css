@@ -20,32 +20,68 @@
     width: 320px;
     left: max(calc(290px * 8), 100%);
     animation-name: scrollLeft;
-    animation-duration: 60s;
+    animation-duration: 90s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 .item-1{
-    animation-delay: calc(60s / 8 * ( 8 - 1) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 1) * -1);
 }
 .item-2{
-    animation-delay: calc(60s / 8 * ( 8 - 2) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 2) * -1);
 }
 .item-3{
-    animation-delay: calc(60s / 8 * ( 8 - 3) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 3) * -1);
 }
 .item-4{
-    animation-delay: calc(60s / 8 * ( 8 - 4) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 4) * -1);
 }
 .item-5{
-    animation-delay: calc(60s / 8 * ( 8 - 5) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 5) * -1);
 }
 .item-6{
-    animation-delay: calc(60s / 8 * ( 8 - 6) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 6) * -1);
 }
 .item-7{
-    animation-delay: calc(60s / 8 * ( 8 - 7) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 7) * -1);
 }
 .item-8{
-    animation-delay: calc(60s / 8 * ( 8 - 8) * -1);
+    animation-delay: calc(90s / 8 * ( 8 - 8) * -1);
 }
+
+
+.TestimonialsDiv{
+    mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) );
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+
+
+.testimonialCard-up{
+    animation: 80s slideUp infinite linear;
+}
+
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+
+.testimonialCard-down{
+    animation: 80s slideDown infinite linear;
+}
+
+
+  

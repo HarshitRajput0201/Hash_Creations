@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const PortfolioCard = ({imageURL, cardName, cardDescription, cardLink}) => {
   return (
-    <div className="flex flex-col w-full justify-between items-center gap-5 p-5 rounded-3xl border border-border bg-nav-bg" style={{ aspectRatio: '14/10' }}>
+    <div className="flex flex-col w-full justify-between items-center gap-5 p-5 rounded-3xl border border-border bg-servicecard" style={{ aspectRatio: '14/10' }}>
       <div className="w-full flex justify-center items-center">
         <img className="w-full h-full rounded-2xl object-cover" style={{ aspectRatio: '18/10' }} src={imageURL} alt={imageURL} />
       </div>
