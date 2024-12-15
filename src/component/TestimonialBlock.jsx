@@ -3,6 +3,8 @@ import TestimonialCard from "./TestimonialCard";
 
 const TestimonialBlock = ({TestimonialsData, direction}) => {
 
+  const shuffledData = shuffleArray(TestimonialsData);
+
   TestimonialsData.map((cardData) => (
     <TestimonialCard
       key={cardData.id}
@@ -15,10 +17,10 @@ const TestimonialBlock = ({TestimonialsData, direction}) => {
   ));
 
   return (
-    <div className={`testimonialCards h-full flex flex-col overflow-hidden relative `}>
+    <div className={`w-1/3 testimonialCards h-full flex flex-col overflow-hidden relative `}>
       <div className={`testimonialCard-${direction} m-0`}>
         {
-          TestimonialsData.map((cardData) => (
+          shuffledData.map((cardData) => (
             <TestimonialCard
               key={cardData.id}  // It's better to use a unique id for the key rather than the index
               id={cardData.id}
@@ -32,7 +34,7 @@ const TestimonialBlock = ({TestimonialsData, direction}) => {
       </div>
       <div className={`testimonialCard-${direction} m-0`}>
         {
-          TestimonialsData.map((cardData) => (
+          shuffledData.map((cardData) => (
             <TestimonialCard
               key={cardData.id}  // It's better to use a unique id for the key rather than the index
               id={cardData.id}
@@ -47,6 +49,16 @@ const TestimonialBlock = ({TestimonialsData, direction}) => {
     </div>
   )
 }
+
+
+const shuffleArray = (array) => {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
 
 TestimonialBlock.propTypes = {
   TestimonialsData: PropTypes.arrayOf(

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const TestimonialCard = ({name, designation, feedback, image}) => {
   return (
-    <div className={`w-[386px] flex flex-col gap-9 justify-between items-center p-6 rounded-3xl border border-border bg-servicecard testimonial-card mt-5`}>
+    <div className={`w-full flex flex-col gap-9 justify-between items-center p-6 rounded-3xl border border-border bg-servicecard testimonial-card mt-5`}>
       <p className='w-full text-description font-bodyfont'>{feedback}</p>
       <div className="w-full flex flex-row gap-3 items-center">
         <div className="w-12 h-12 flex justify-center items-center rounded-full overflow-hidden">

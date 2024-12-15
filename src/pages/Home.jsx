@@ -10,6 +10,7 @@ import ServiceCards from "../component/ServiceCards.jsx";
 import HeadingBlock from "../component/HeadingBlock.jsx";
 import { RiBox3Fill } from "react-icons/ri";
 import { FaPeopleGroup } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import WorkImage from "../assets/WorkImage.png";
 import PortfolioCard from "../component/PortfolioCard.jsx";
 import PortfolioData from "../data/PortfolioData.js";
@@ -19,6 +20,11 @@ import AgencyIcon3 from "../assets/AgencyIcon3.svg";
 import AgencyIcon4 from "../assets/AgencyIcon4.svg";
 import TestimonialBlock from "../component/TestimonialBlock.jsx";
 import TestimonialsData from "../data/TestimonialsData.js";
+import ContactCards from "../component/ContactCards.jsx";
+import ContactForm from "../component/ContactForm.jsx";
+import { FaFacebook, FaInstagram,  FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -155,6 +161,30 @@ const Home = () => {
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="up"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
+          </div>
+        </div>
+        <div className="w-full flex flex-col justify-between items-center gap-20 my-24">
+          <HeadingBlock badgeheading={"CONTACT US"} mainheading={"Let’s Work Together"} />
+          <div className="w-10/12 flex flex-col justify-between items-center gap-5">
+            <ContactCards />
+            <ContactForm />
+            <footer className="w-full flex flex-row justify-between items-center px-10 py-4 border border-border rounded-2xl bg-card">
+              <p className="text-description">All Copyrights Reserved By Aeriesys Tech 2024 </p>
+              <div className="flex flex-row justify-between items-center gap-2">
+                <Link to={"/"}> 
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaFacebook className="w-9 h-9 text-description" /></div>
+                </Link>
+                <Link to={"/"}>
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaLinkedin className="w-9 h-9 text-description" /></div>
+                </Link>
+                <Link to={"/"}>
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaInstagram className="w-9 h-9 text-description" /></div>
+                </Link>
+                <Link to={"/"}>
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaXTwitter className="w-9 h-9 text-description" /></div>
+                </Link>
+              </div>
+            </footer>
           </div>
         </div>
       </div>

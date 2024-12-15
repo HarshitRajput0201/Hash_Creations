@@ -19,8 +19,8 @@ const HeadingBlock = ({badgeheading, mainheading, mainspan, description}) => {
 HeadingBlock.propTypes = {
     badgeheading: PropTypes.string.isRequired,
     mainheading: PropTypes.string.isRequired,
-    mainspan: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    mainspan: PropTypes.string,
+    description: PropTypes.string,
   };
 
 export default HeadingBlock
