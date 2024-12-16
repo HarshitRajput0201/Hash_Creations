@@ -6,7 +6,7 @@ import Logo from "../assets/AERIESYS.png";
 
 const NavBar = () => {
   return (
-    <div className='w-10/12 mx-auto flex flex-row justify-between sticky top-10 z-50'>
+    <div className='w-10/12 mx-auto flex flex-row justify-between sticky top-10 z-50 2xl:max-w-[1440px]'>
       <div className="flex justify-center items-center">
         <Link to={"/"}>
             <img src={Logo} alt="" />

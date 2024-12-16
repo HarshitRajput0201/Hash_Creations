@@ -12,7 +12,7 @@
 }
 
 .wrapper{
-    width: 200%;
+    width: 100%;
     mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) );
 }
 
@@ -83,5 +83,12 @@
     animation: 80s slideDown infinite linear;
 }
 
+
+@media screen and (min-width: 1536px) {
+    .item{
+        width: 350px;
+        left: max(calc(320px * 8), 100%);
+    }
+  }
 
   
