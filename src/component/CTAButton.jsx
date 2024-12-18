@@ -5,7 +5,7 @@ const CTAButton = ({children, linkto}) => {
   return (
     <div className='flex justify-center items-center'>
       <Link to={linkto}>
-          <div className='flex justify-center items-center bg-CTA-bg px-6 py-3 rounded-lg'>{children}</div>
+          <div className='flex justify-center items-center bg-navBtnBg text-white px-6 py-3 rounded-lg'>{children}</div>
       </Link>
     </div>
   )

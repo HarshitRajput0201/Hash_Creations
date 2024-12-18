@@ -10,16 +10,16 @@ const ContactCards = () => {
     <div className="w-full h-full flex flex-row justify-between items-center gap-5">
       {
          ContactData.map((cardData, index) => (
-          <div className="w-1/3 h-full flex flex-col justify-between items-start gap-9 p-6 rounded-2xl border border-border bg-card" key={index}>
+          <div className="w-1/3 h-full flex flex-col justify-between items-start gap-9 p-6 rounded-2xl border border-border bg-cardBg" key={index}>
             <div className="w-9 h-9 flex justify-center items-center"><img className="w-full h-full" src={cardData.image} alt="" /></div>
             <div className="w-full flex flex-row justify-between items-end">
               <div className="flex flex-col justify-between items-start gap-1">
                 <p className="text-2xl">{cardData.name}</p>
-                <p className="text-lg font-bodyfont text-description">{cardData.contact}</p>
+                <p className="text-lg font-bodyfont text-textDescription">{cardData.contact}</p>
               </div>
               <Link to={cardData.contactUrl}>
-                <div className="flex justify-end items-end border border-accentgreen px-3 py-1 rounded-full">
-                    <FaArrowRightLong className="text-accentgreen" />
+                <div className="flex justify-end items-end border border-badgeText px-3 py-1 rounded-full">
+                    <FaArrowRightLong className="text-badgeText" />
                 </div>
               </Link>
             </div>

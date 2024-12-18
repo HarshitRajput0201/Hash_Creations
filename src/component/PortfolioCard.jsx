@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const PortfolioCard = ({imageURL, cardName, cardDescription, cardLink}) => {
   return (
-    <div className="flex flex-col w-full justify-between items-center gap-5 p-5 rounded-3xl border border-border bg-servicecard " style={{ aspectRatio: '14/10' }}>
+    <div className="flex flex-col w-full justify-between items-center gap-5 p-5 rounded-3xl border border-border bg-cardBg " style={{ aspectRatio: '14/10' }}>
       <div className="w-full flex justify-center items-center">
         <img className="w-full h-full rounded-2xl object-cover" style={{ aspectRatio: '18/10' }} src={imageURL} alt={imageURL} />
       </div>
       <div className="w-full flex flex-row justify-between">
         <div className="flex flex-col gap-2">
             <p className="text-2xl font-semibold 2xl:text-[28px]">{cardName}</p>
-            <p className="text-lg font-bodyfont text-description 2xl:text-xl">{cardDescription}</p>
+            <p className="text-lg font-bodyfont text-textDescription 2xl:text-xl">{cardDescription}</p>
         </div>
         <div className="flex justify-end items-end ">
             <Link className="border border-border rounded-lg" to={cardLink}>

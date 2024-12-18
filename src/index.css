@@ -7,18 +7,43 @@
 
 .dark{
     --background: 13, 13, 13;
-    --border: 53, 53, 53;
-    --card: 20, 20, 20;
-    --service-card: 17, 17, 17;
-    --text-heading: 255, 255, 255;
-    --text-description: 173, 173, 173;
-    --custom-gradient: linear-gradient(125.81deg, #1E1E1E 4.31%, #1D1D1D 22.95%, #1C1C1C 41.59%, #1B1B1B 60.23%, #1A1A1A 79.24%, #191919 97.5%);
+    --logo-bg: 250, 250, 250;
+    --nav-bg: 27, 27, 27;
+    --nav-border: 53, 53, 53;
+    --nav-text: 255, 255, 255;
     --nav-text-hover: 131, 86, 251;
-    --accent-green: 128, 255, 96;
-    --accent-purple: 148, 108, 255;
+    --nav-btn-text: 255, 255, 255;
+    --text-heading: 255, 255, 255;
+    --text-description: 193, 193, 193;
+    --border: 53, 53, 53;
+    --badge-bg: 128, 255, 96;
+    --badge-text: 128, 255, 96;
+    --service-btn-bg: 27, 27, 27;
+    --card-bg: 20, 20, 20;
+    --work-icon-bg: 131, 86, 251;
+    --work-icon-text: 255, 255, 255;
+    --footer-icon-text: 193, 193, 193;
 
-
-    background: rgba(var(--background));
+  }
+  
+.light{
+    --background: 250, 250, 250;
+    --logo-bg: 131, 86, 251;
+    --nav_bg: 245, 245, 245;
+    --nav-border: 225, 225, 225;
+    --nav-text: 13, 13, 13;
+    --nav-text-hover: 131, 86, 251;
+    --nav-btn-text: 255, 255, 255;
+    --text-heading: 33, 33, 33;
+    --text-description: 73, 73, 73;
+    --border: 225, 225, 225;
+    --badge-bg: 131, 86, 251;
+    --badge-text: 131, 86, 251;
+    --service-btn-bg: 245, 245, 245;
+    --card-bg: 255, 255, 255;
+    --work-icon-bg: 131, 86, 251;
+    --work-icon-text: 255, 255, 255;
+    --footer-icon-text: 33, 33, 33;
 }
 
 

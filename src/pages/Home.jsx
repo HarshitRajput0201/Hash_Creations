@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center w-full font-headingfont bg-background text-heading relative overflow-hidden">
+    <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative ">
       <div className="flex flex-col items-center w-full relative z-10">
         <img className="absolute w-full h-[300px] z-0" src={HeroBG1} alt="HeroBG1" />
         <img className="absolute w-full h-[300px] top-[500px] z-0" src={HeroBG2} alt="HeroBG2" />
@@ -41,8 +41,8 @@ const Home = () => {
         <div className="flex flex-col w-10/12 mt-36 z-10 2xl:max-w-[1440px] 2xl:mt-40 ">
           <div className="w-full flex flex-col justify-between items-center gap-16 2xl:gap-20">
             <div className="w-9/12 flex flex-col items-center gap-6 2xl:gap-8">
-              <h1 className="text-[64px] leading-tight text-center capitalize font-semibold 2xl:text-[68px]">Transforming Business with Cutting-Edge Solution</h1>
-              <p className="w-6/12 text-lg text-description text-center capitalize 2xl:text-xl">We create custom software, mobile apps, and seamless UI/UX designs</p>
+              <h1 className="text-[64px] leading-tight text-textHeading text-center capitalize font-semibold 2xl:text-[68px]">Transforming Business with Cutting-Edge Solution</h1>
+              <p className="w-6/12 text-lg text-textDescription text-center capitalize 2xl:text-xl">We create custom software, mobile apps, and seamless UI/UX designs</p>
             </div>
             <CTAButton linkto="/">
               <div className="flex justify-between items-center gap-2 text-lg 2xl:text-xl">
@@ -63,30 +63,30 @@ const Home = () => {
           <div className="w-10/12 flex flex-row justify-between items-center gap-10 2xl:max-w-[1440px]">
             <div className="w-[50%] h-full flex flex-col justify-between items-center gap-12 2xl:gap-14">
               <div className="w-full flex flex-col justify-between items-start gap-6 2xl:gap-7">
-                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-accentpurple rounded-lg text-white text-sm 2xl:text-lg">
+                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm 2xl:text-lg">
                   <div><RiBox3Fill /></div>
                   <p>OUR WORK</p>
                 </div>
                 <div className="flex flex-col justify-between items-start gap-3 2xl:gap-4">
                   <p className="text-4xl font-semibold 2xl:text-[40px]">What Will You Get From Us</p>
-                  <p className="font-bodyfont text-lg text-description 2xl:text-xl">Delivering web, app, and design solutions that empower your brand and captivate your audience.</p>
+                  <p className="font-bodyfont text-lg text-textDescription 2xl:text-xl">Delivering web, app, and design solutions that empower your brand and captivate your audience.</p>
                 </div> 
               </div>
               <div className="w-full grid grid-cols-2 gap-4 2xl:gap-5">
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
-                  <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
+                  <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
                   <div className="flex flex-wrap">Responsive and Mobile-First Design</div>
                 </div>
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
-                  <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
+                  <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
                   <div className="flex flex-wrap">Responsive and Mobile-First Design</div>
                 </div>
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
-                  <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
+                  <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
                   <div className="flex flex-wrap">Responsive and Mobile-First Design</div>
                 </div>
-                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
-                  <div className="flex justify-center items-center p-3 bg-accentpurple rounded-lg"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
+                <div className="flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
+                  <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText"><FaPeopleGroup className="w-6 h-6 2xl:w-7 2xl:h-7" /></div>
                   <div className="flex flex-wrap">Responsive and Mobile-First Design</div>
                 </div>
               </div>
@@ -113,42 +113,42 @@ const Home = () => {
             </div>
             <div className="w-[50%] h-full flex flex-col justify-between items-center gap-12 2xl:gap-14">
               <div className="w-full flex flex-col justify-between items-start gap-6 2xl:gap-7">
-                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-nav-bg rounded-lg text-accentgreen text-sm 2xl:text-lg">
+                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm 2xl:text-lg">
                   <RiBox3Fill />
                   <p>OUR WORK</p>
                 </div>
                 <div className="flex flex-col justify-between items-start gap-3 2xl:gap-4">
                   <p className="text-4xl font-semibold 2xl:text-[40px]">What’s Different In Our Agency</p>
-                  <p className="font-bodyfont text-[18px] text-description 2xl:text-xl">Delivering web, app, and design solutions that empower your brand and captivate your audience.</p>
+                  <p className="font-bodyfont text-[18px] text-textDescription 2xl:text-xl">Delivering web, app, and design solutions that empower your brand and captivate your audience.</p>
                 </div> 
               </div>
               <div className="w-full grid grid-cols-2 gap-4 2xl:gap-5">
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
                   <div className="flex justify-center items-center "><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon1} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
                   <div className="flex justify-center items-center"><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon2} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
                   <div className="flex justify-center items-center"><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon3} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
                   </div>
                 </div>
-                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-servicecard rounded-2xl border border-border 2xl:gap-5">
+                <div className="flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border 2xl:gap-5">
                   <div className="flex justify-center items-center"><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon4} alt="" /></div>
                   <div className="flex flex-col justify-between items-start gap-1">
                     <p className="font-semibold text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-description text-sm">Understand client goals and project requirements</p>
+                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
                   </div>
                 </div>
               </div>
@@ -157,7 +157,7 @@ const Home = () => {
         </div>
         <div className="w-full flex flex-col justify-between items-center gap-20 my-24 2xl:my-28 2xl:gap-24">
           <HeadingBlock badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
-          <div className="TestimonialsDiv w-10/12 h-[800px] flex flex-row justify-between items-center gap-5 overflow-hidden 2xl:max-w-[1440px] 2xl:gap-8">
+          <div className="TestimonialsDiv w-10/12 h-[800px] flex flex-row justify-between items-center gap-5 overflow-hidden 2xl:max-w-[1440px]">
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="up"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
@@ -168,20 +168,20 @@ const Home = () => {
           <div className="w-10/12 flex flex-col justify-between items-center gap-5 2xl:max-w-[1440px]">
             <ContactCards />
             <ContactForm />
-            <footer className="w-full flex flex-row justify-between items-center px-10 py-4 border border-border rounded-2xl bg-card">
-              <p className="text-description">All Copyrights Reserved By Aeriesys Tech 2024 </p>
+            <footer className="w-full flex flex-row justify-between items-center px-10 py-4 border border-border rounded-2xl bg-cardBg">
+              <p className="text-textDescription">All Copyrights Reserved By Aeriesys Tech 2024 </p>
               <div className="flex flex-row justify-between items-center gap-2">
                 <Link to={"/"}> 
-                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaFacebook className="w-9 h-9 text-description" /></div>
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaFacebook className="w-9 h-9 text-footerIconText" /></div>
                 </Link>
                 <Link to={"/"}>
-                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaLinkedin className="w-9 h-9 text-description" /></div>
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaLinkedin className="w-9 h-9 text-footerIconText" /></div>
                 </Link>
                 <Link to={"/"}>
-                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaInstagram className="w-9 h-9 text-description" /></div>
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaInstagram className="w-9 h-9 text-footerIconText" /></div>
                 </Link>
                 <Link to={"/"}>
-                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaXTwitter className="w-9 h-9 text-description" /></div>
+                  <div className="flex justify-center items-center p-2 border border-border rounded-2xl"><FaXTwitter className="w-9 h-9 text-footerIconText" /></div>
                 </Link>
               </div>
             </footer>
