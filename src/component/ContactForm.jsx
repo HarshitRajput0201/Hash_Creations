@@ -2,7 +2,7 @@
 
 const ContactForm = () => {
   return (
-    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-2xl border border-border overflow-hidden p-10">
+    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-2xl border border-border overflow-hidden shadow-default p-10">
       <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16">
       <p className="text-center leading-none font-medium">{"Let's"}</p>
         <p className="text-center font-semibold leading-none text-badgeText">Talk!</p>
@@ -55,7 +55,7 @@ const ContactForm = () => {
         <div className="text-center">
             <button
             type="submit"
-            className="py-2 px-9 bg-workIconBg text-white font-semibold rounded-lg hover:bg-workIconBg focus:outline-none focus:ring-2 focus:ring-workIconBg focus:ring-offset-2"
+            className="w-full mt-4 py-2 px-9 bg-workIconBg text-white font-semibold rounded-lg hover:bg-workIconBg focus:outline-none focus:ring-2 focus:ring-workIconBg focus:ring-offset-2"
             >
             Send Your Message
             </button>

@@ -13,6 +13,7 @@ export default {
         navText: "rgba(var(--nav-text))",
         navTextHover: "rgba(var(--nav-text-hover))",
         navBtnText: "rgba(var(--nav-btn-text))",
+        navBtnsBG: "rgba(var(--nav-btns-bg))",
         textHeading: "rgba(var(--text-heading))",
         textDescription: "rgba(var(--text-description))",
         border: "rgba(var(--border))",
@@ -26,13 +27,14 @@ export default {
       },
       backgroundImage: {
         'navBtnBg': 'linear-gradient(102.88deg, #8356FB 5.35%, #946CFF 43.55%, #7953DF 85.78%)',
+        'headingGradient': 'linear-gradient(13.51deg, #A997F4 27.74%, #0012B2 103.25%)',
       },
       fontFamily: {
         headingfont: ['"Rethink Sans"', 'sans-serif'], // Font for headings
         bodyfont: ['Lato', 'sans-serif'],           // Font for body text
       },
       boxShadow: {
-        default: "0px 7px 29px 0px rgba(100, 100, 111, 0.2)", // Add your custom shadow
+        default: "var(--box-shadow)", // Add your custom shadow
       },
     },
   },
