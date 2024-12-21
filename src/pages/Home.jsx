@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative ">
+    <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative transition-all duration-200">
       <div className="flex flex-col items-center w-full relative z-10" >
         <div className="absolute w-full h-[300px] z-0" id="home"><img className="absolute w-full h-[300px] z-0"  src={HeroBG1} alt="HeroBG1" /></div>
         <img className="absolute w-full h-[300px] top-[500px] z-0" src={HeroBG2} alt="HeroBG2" />
@@ -63,7 +63,7 @@ const Home = () => {
           <div className="w-10/12 flex flex-row justify-between items-center gap-10 2xl:max-w-[1440px]">
             <div className="w-[50%] h-full flex flex-col justify-between items-center gap-12 2xl:gap-14">
               <div className="w-full flex flex-col justify-between items-start gap-6 2xl:gap-7">
-                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm 2xl:text-lg">
+                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm 2xl:text-[16px] 2xl:px-6">
                   <div><RiBox3Fill /></div>
                   <p>OUR WORK</p>
                 </div>
@@ -113,7 +113,7 @@ const Home = () => {
             </div>
             <div className="w-[50%] h-full flex flex-col justify-between items-center gap-12 2xl:gap-14">
               <div className="w-full flex flex-col justify-between items-start gap-6 2xl:gap-7">
-                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm 2xl:text-lg">
+                <div className="flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm 2xl:text-[16px] 2xl:px-6">
                   <RiBox3Fill />
                   <p>OUR WORK</p>
                 </div>
@@ -157,7 +157,7 @@ const Home = () => {
         </div>
         <div className="w-full flex flex-col justify-between items-center gap-20 my-24 2xl:my-28 2xl:gap-24">
           <HeadingBlock badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
-          <div className="TestimonialsDiv w-10/12 h-[800px] flex flex-row justify-between items-center gap-5 overflow-hidden 2xl:max-w-[1440px]">
+          <div className="TestimonialsDiv w-10/12 h-[600px] flex flex-row justify-between items-center gap-5 overflow-hidden 2xl:max-w-[1280px]">
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="up"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
