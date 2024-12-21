@@ -33,15 +33,15 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative transition-all duration-200">
       <div className="flex flex-col items-center w-full relative z-10" >
-        <div className="absolute w-full h-[300px] z-0" id="home"><img className="absolute w-full h-[300px] z-0"  src={HeroBG1} alt="HeroBG1" /></div>
+        <div className="absolute w-full h-[300px] z-0" id="home"><img className="absolute w-full h-[300px] z-0 object-cover"  src={HeroBG1} alt="HeroBG1" /></div>
         <img className="absolute w-full h-[300px] top-[500px] z-0" src={HeroBG2} alt="HeroBG2" />
         <img className="absolute left-0 z-0" src={HeroLeftCornerBG} alt="HeroLeftCornerBG" />
         <img className="absolute right-0 z-0" src={HeroRightCornerBG} alt="HeroRightCornerBG" />
         <NavBar/>
-        <div className="flex flex-col w-10/12 mt-36 z-10 2xl:max-w-[1440px] 2xl:mt-40 ">
+        <div className="flex flex-col w-10/12 mt-36 z-10 2xl:max-w-[1440px] 2xl:mt-40">
           <div className="w-full flex flex-col justify-between items-center gap-16 2xl:gap-20">
             <div className="w-9/12 flex flex-col items-center gap-6 2xl:gap-8">
-              <h1 className="text-[64px] leading-tight text-textHeading text-center capitalize font-semibold 2xl:text-[68px]">Transforming Business with Cutting-Edge Solution</h1>
+              <h1 className="text-[64px] leading-tight text-textHeading text-center capitalize font-semibold 2xl:text-[68px] xl:text-[56px]">Transforming Business with Cutting-Edge Solution</h1>
               <p className="w-6/12 text-lg text-textDescription text-center capitalize 2xl:text-xl">We create custom software, mobile apps, and seamless UI/UX designs</p>
             </div>
             <CTAButton linkto="/">
