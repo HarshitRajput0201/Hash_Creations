@@ -157,7 +157,7 @@ const Home = () => {
         </div>
         <div className="w-full flex flex-col justify-between items-center gap-20 my-24 2xl:my-28 2xl:gap-24">
           <HeadingBlock badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
-          <div className="TestimonialsDiv w-10/12 h-[600px] flex flex-row justify-between items-center gap-5 overflow-hidden 2xl:max-w-[1280px]">
+          <div className="TestimonialsDiv w-10/12 h-[600px] flex flex-row justify-between items-center gap-5 overflow-hidden 2xl:max-w-[1440px]">
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="up"/>
             <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
