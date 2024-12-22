@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const CTAButton = ({children, linkto}) => {
   return (
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center items-center lg:text-sm'>
       <Link to={linkto}>
-          <div className='flex justify-center items-center bg-navBtnBg text-white px-6 py-3 rounded-lg'>{children}</div>
+          <div className='flex justify-center items-center bg-navBtnBg text-white px-6 py-3 rounded-lg lg:px-4 lg:py-2'>{children}</div>
       </Link>
     </div>
   )

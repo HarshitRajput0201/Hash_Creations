@@ -2,8 +2,8 @@
 
 const ContactForm = () => {
   return (
-    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-2xl border border-border overflow-hidden shadow-default p-10">
-      <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16">
+    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-3xl border border-border overflow-hidden shadow-default p-10">
+      <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16 lg:text-[120px]">
       <p className="text-center leading-none font-medium">{"Let's"}</p>
         <p className="text-center font-semibold leading-none text-badgeText">Talk!</p>
       </div>

@@ -17,7 +17,7 @@ const TestimonialBlock = ({TestimonialsData, direction}) => {
   ));
 
   return (
-    <div className={`w-1/3 testimonialCards h-full flex flex-col relative`}>
+    <div className={`w-full testimonialCards h-full flex flex-col relative`}>
       <div className={`testimonialCard-${direction} m-0`}>
         {
           shuffledData.map((cardData) => (

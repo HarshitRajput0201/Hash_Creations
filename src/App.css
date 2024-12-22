@@ -83,12 +83,19 @@
     animation: 80s slideDown infinite linear;
 }
 
-
+@media screen and (min-width: 1024px) {
+    .item{
+        width: 260px;
+        left: max(calc(230px * 8), 100%);
+    }
+}
 @media screen and (min-width: 1536px) {
     .item{
         width: 350px;
         left: max(calc(320px * 8), 100%);
     }
-  }
+}
+
+
 
   
