@@ -5,6 +5,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xxxs: { max: "390px" },
+        xxs: { max: "480px" },
+        xs: { max: "639px" }, 
+      },
       colors: {
         background: "rgba(var(--background))",
         logoBg: "rgba(var(--logo-bg))",

@@ -34,15 +34,15 @@ const Home = () => {
     <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative transition-all duration-200">
       <div className="flex flex-col items-center w-full relative z-10" >
         <div className="absolute w-full h-[300px] z-0" id="home"><img className="absolute w-full h-[300px] z-0 object-cover"  src={HeroBG1} alt="HeroBG1" /></div>
-        <img className="absolute w-full h-[300px] top-[500px] z-0 lg:top-[380px]" src={HeroBG2} alt="HeroBG2" />
+        <img className="absolute w-full h-[300px] top-[500px] z-0 lg:top-[380px] xl:top-[440px]" src={HeroBG2} alt="HeroBG2" />
         <img className="absolute left-0 z-0" src={HeroLeftCornerBG} alt="HeroLeftCornerBG" />
         <img className="absolute right-0 z-0" src={HeroRightCornerBG} alt="HeroRightCornerBG" />
         <NavBar/>
-        <div className="flex flex-col w-10/12 mt-36 z-10 2xl:max-w-[1440px] 2xl:mt-40 lg:mt-32">
-          <div className="w-full flex flex-col justify-between items-center gap-16 2xl:gap-20 lg:gap-12">
-            <div className="w-9/12 flex flex-col items-center gap-6 2xl:gap-8 lg:gap-5">
+        <div className="flex flex-col w-10/12 mt-36 z-10 2xl:max-w-[1440px] 2xl:mt-40 lg:mt-32 xl:mt-36">
+          <div className="w-full flex flex-col justify-between items-center gap-16 2xl:gap-20 lg:gap-12 xl:gap-16">
+            <div className="w-9/12 flex flex-col items-center gap-6 2xl:gap-8 lg:gap-5 xl:gap-6">
               <h1 className="text-[64px] leading-tight text-textHeading text-center capitalize font-semibold 2xl:text-[68px] xl:text-[56px] lg:text-[48px]">Transforming Business with Cutting-Edge Solution</h1>
-              <p className="w-6/12 text-lg text-textDescription text-center capitalize 2xl:text-xl lg:w-8/12">We create custom software, mobile apps, and seamless UI/UX designs</p>
+              <p className="w-6/12 text-lg text-textDescription text-center capitalize 2xl:text-xl lg:w-8/12 xl:w-7/12">We create custom software, mobile apps, and seamless UI/UX designs</p>
             </div>
             <CTAButton linkto="/">
               <div className="flex justify-between items-center gap-2 text-lg 2xl:text-xl lg:text-[16px]">

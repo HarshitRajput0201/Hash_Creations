@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path='/Hash_Creations/' element={<Home/>} />
       </Routes>
     </div>
   );
