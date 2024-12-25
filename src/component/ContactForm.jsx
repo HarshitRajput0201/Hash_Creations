@@ -2,12 +2,12 @@
 
 const ContactForm = () => {
   return (
-    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-3xl border border-border overflow-hidden shadow-default p-10 xxs:flex-col xxs:p-0 xxs:border-none xxs:bg-transparent xxs:gap-6">
+    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-3xl border border-border shadow-default overflow-hidden p-10 xxs:flex-col xxs:py-2 xxs:px-0 xxs:bg-transparent xxs:border-none xxs:gap-6 xxs:shadow-none">
       <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16 lg:text-[120px] xxs:text-6xl xxs:flex-row xxs:w-full xxs:pr-0">
         <p className="text-center leading-none font-medium">{"Let's"}</p>
         <p className="text-center font-semibold leading-none text-badgeText">Talk!</p>
       </div>
-      <form className="w-[50%] h-full flex flex-col gap-5 bg-card p-6 rounded-2xl border border-border xxs:w-full xxs:bg-cardBg">
+      <form className="w-[50%] h-full flex flex-col gap-5 bg-card p-6 rounded-2xl border border-border xxs:w-full xxs:bg-none">
         <div className="flex flex-col gap-2">
           <label htmlFor="name" className="text-lg">
             Name

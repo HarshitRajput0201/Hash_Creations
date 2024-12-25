@@ -178,7 +178,7 @@ const Home = () => {
           <div className="w-10/12 flex flex-col justify-between items-center gap-5 2xl:max-w-[1440px] xxs:w-11/12 xxs:mx-4 xxs:gap-9">
             <ContactCards />
             <ContactForm />
-            <footer className="w-full flex flex-row justify-between items-center px-10 py-4 border border-border rounded-3xl shadow-default bg-cardBg xxs:bg-transparent xxs:border-none xxs:flex-col-reverse xxs:p-0 gap-6">
+            <footer className="w-full flex flex-row justify-between items-center px-10 py-4 border border-border rounded-3xl shadow-default bg-cardBG xxs:bg-background xxs:border-none  xxs:flex-col-reverse xxs:p-0 gap-6 xxs:shadow-none">
               <p className="text-textDescription xxs:text-center">All Copyrights Reserved By Aeriesys Tech 2024 </p>
               <div className="flex flex-row justify-between items-center gap-2">
                 <Link to={"/"}> 
