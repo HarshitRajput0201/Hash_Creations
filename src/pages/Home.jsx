@@ -179,7 +179,7 @@ const Home = () => {
             <ContactCards />
             <ContactForm />
             <footer className="w-full flex flex-row justify-between items-center px-10 py-4 border border-border rounded-3xl shadow-default bg-cardBG xxs:bg-background xxs:border-none  xxs:flex-col-reverse xxs:p-0 gap-6 xxs:shadow-none">
-              <p className="text-textDescription xxs:text-center">All Copyrights Reserved By Aeriesys Tech 2024 </p>
+              <p className="text-textDescription xxs:text-center xxs:text-sm">All Copyrights Reserved By Aeriesys Tech 2024 </p>
               <div className="flex flex-row justify-between items-center gap-2">
                 <Link to={"/"}> 
                   <div className="flex justify-center items-center p-2 border border-border rounded-2xl xxs:rounded-lg"><FaFacebook className="w-7 h-7 text-footerIconText" /></div>

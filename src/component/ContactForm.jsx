@@ -8,8 +8,8 @@ const ContactForm = () => {
         <p className="text-center font-semibold leading-none text-badgeText">Talk!</p>
       </div>
       <form className="w-[50%] h-full flex flex-col gap-5 bg-card p-6 rounded-2xl border border-border xxs:w-full xxs:bg-none">
-        <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="text-lg">
+        <div className="flex flex-col gap-2 xxs:gap-1">
+          <label htmlFor="name" className="text-lg xxs:text-[16px]">
             Name
           </label>
           <input
@@ -18,13 +18,13 @@ const ContactForm = () => {
             name="name"
             placeholder="Enter Your Full Name"
             required
-            className="w-full py-3 px-4 border border-border rounded-lg bg-cardBg text-white placeholder-textDescription focus:outline-none focus:ring-2 focus:ring-workIconBg focus:border-transparent"
+            className="w-full py-3 px-4 border border-border rounded-lg bg-cardBg text-white placeholder-textDescription focus:outline-none focus:ring-2 focus:ring-workIconBg focus:border-transparent xxs:text-[16px] xxs:py-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 xxs:gap-1">
           <label
             htmlFor="email"
-            className="text-lg"
+            className="text-lg xxs:text-[16px]"
           >
             Email
           </label>
@@ -34,13 +34,13 @@ const ContactForm = () => {
             name="email"
             placeholder="Enter Your Email"
             required
-            className="w-full py-3 px-4 border border-border rounded-lg bg-cardBg text-white placeholder-textDescription focus:outline-none focus:ring-2 focus:ring-workIconBg focus:border-transparent"
+            className="w-full py-3 px-4 border border-border rounded-lg bg-cardBg text-white placeholder-textDescription focus:outline-none focus:ring-2 focus:ring-workIconBg focus:border-transparent xxs:text-[16px] xxs:py-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 xxs:gap-1">
           <label
             htmlFor="message"
-            className="text-lg"
+            className="text-lg xxs:text-[16px]"
           >
             Message
           </label>
@@ -49,7 +49,7 @@ const ContactForm = () => {
             name="message"
             placeholder="Type your message here"
             required
-            className="w-full py-3 px-4 border border-border rounded-lg bg-cardBg text-white placeholder-textDescription focus:outline-none focus:ring-2 focus:ring-workIconBg focus:border-transparent h-24 resize-none"
+            className="w-full py-3 px-4 border border-border rounded-lg bg-cardBg text-white placeholder-textDescription focus:outline-none focus:ring-2 focus:ring-workIconBg focus:border-transparent h-24 resize-none xxs:text-[16px] xxs:py-2"
           ></textarea>
         </div>
         <div className="text-center">

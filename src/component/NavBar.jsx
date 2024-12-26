@@ -5,8 +5,11 @@ import CTAButton from "./CTAButton";
 import Logo from "../assets/AERIESYS.svg";
 import Sun_Icon from "../assets/light_mode_sun.svg";
 import Moon_Icon from "../assets/dark_mode_moon.svg";
-import NavBarIcon from "../assets/navBarIcon.svg";
-import NavCrossIcon from "../assets/navCrossIcon.svg";
+import NavBarIconLight from "../assets/navBarIconLight.svg";
+import NavBarIconDark from "../assets/navBarIconDark.svg";
+import NavCrossIconLight from "../assets/navCrossIconLight.svg";
+import NavCrossIconDark from "../assets/navCrossIconDark.svg";
+
 
 
 
@@ -82,6 +85,13 @@ const NavBar = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isNavbarOpen]);
 
+  const getNavIcon = (isDarkMode, isNavbarOpen) => {
+    if (isDarkMode) {
+      return isNavbarOpen ? NavCrossIconLight : NavBarIconLight ;
+    }
+    return isNavbarOpen ? NavCrossIconDark : NavBarIconDark ;
+  };
+
   return (
     <div className='w-10/12 mx-auto flex flex-col justify-between items-center sticky top-10 z-50 transition-all duration-200 2xl:max-w-[1440px] xxs:w-11/12 xxs:mx-4 xxs:gap-3 xxs:top-6'>
       <div className='navbar w-full flex flex-row justify-between xxs:bg-navBg/50 xxs:bg-clip-padding xxs:backdrop-filter xxs:backdrop-blur-md xxs:bg-opacity-0 xxs:p-4 xxs:border xxs:border-navBorder xxs:rounded-xl'>
@@ -103,16 +113,16 @@ const NavBar = () => {
         </div>
         <div className="flex flex-row justify-between items-center gap-3 xxs:gap-2">
           <button
-            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxs:h-9 xxs:w-9 xxs:p-2"
+            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxs:p-2"
             onClick={toggleTheme}
           >
             <img className="h-6 w-6 lg:h-5 lg:w-5 xl:w-6 xl:h-6 xxs:h-5 xxs:w-5" src={isDarkMode ? Sun_Icon : Moon_Icon} alt="Nav Toggle Icon" />
           </button>
           <button
-            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxs:h-9 xxs:w-9 xxs:p-2"
+            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxs:p-2"
             onClick={toggleNavbar}
           >
-            <img className="h-6 w-6 lg:h-5 lg:w-5 xl:w-6 xl:h-6 xxs:h-5 xxs:w-5" src={isNavbarOpen ? NavCrossIcon : NavBarIcon} alt="Nav Toggle Icon" />
+            <img className="h-6 w-6 lg:h-5 lg:w-5 xl:w-6 xl:h-6 xxs:h-5 xxs:w-5" src={getNavIcon(isDarkMode, isNavbarOpen)} alt="Nav Toggle Icon" />
           </button>
           <div className='flex justify-center items-center xxs:hidden'><CTAButton linkto={"/"}>Lets Talk</CTAButton></div>
         </div>
@@ -121,21 +131,21 @@ const NavBar = () => {
         <div className={`navbar absolute flex flex-col xxs:w-full xxs:bg-navBg/50 xxs:bg-clip-padding xxs:backdrop-filter xxs:backdrop-blur-md xxs:bg-opacity-0 xxs:p-4 xxs:border xxs:border-navBorder xxs:rounded-xl xxs:gap-2 xxs:top-20 transition-all duration-300  ${isNavbarOpen ? 'open' : 'closed'}`}>
           <div className={`h-full flex justify-center items-center px-6 py-2 rounded-lg text-heading hover:text-navTextHover transition-all duration-200 hover:cursor-pointer ${
               activeSection === "home" ? "text-navTextHover bg-navBtnsBG transition-all duration-200" : ""}`}>
-            <HashLink to="#home">Home</HashLink>
+            <HashLink className='w-full text-center' to="#home">Home</HashLink>
           </div>
           <div
             className={`h-full flex justify-center items-center px-6 py-2 rounded-lg text-heading hover:text-navTextHover transition-all duration-200 hover:cursor-pointer ${
               activeSection === "services" ? "text-navTextHover bg-navBtnsBG transition-all duration-200" : ""
             }`}
           >
-            <HashLink to="#services">Services</HashLink>
+            <HashLink className='w-full text-center' to="#services">Services</HashLink>
           </div>
           <div
             className={`h-full flex justify-center items-center px-6 py-2 rounded-lg text-heading hover:text-navTextHover transition-all duration-200 hover:cursor-pointer ${
               activeSection === "work" ? "text-navTextHover bg-navBtnsBG transition-all duration-200" : ""
             }`}
           >
-            <HashLink to="#work">Work</HashLink>
+            <HashLink className='w-full text-center' to="#work">Work</HashLink>
           </div>
           <div className="h-full flex justify-center items-center">
             <CTAButton linkto={"/"}>Lets Talk</CTAButton>
