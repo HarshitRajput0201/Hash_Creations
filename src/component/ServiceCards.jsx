@@ -17,10 +17,10 @@ const ServiceCards = () => {
                                 <p className="text-textDescription font-bodyfont 2xl:text-lg lg:text-[12px]">{cardData.description}</p>
                             </div>
                             <div className="w-full border-t border-border"></div>
-                            <div className="w-full flex flex-wrap gap-1 2xl:gap-2 xl:min-h-[72px]">
+                            <div className="w-full flex flex-wrap gap-1 2xl:gap-2">
                                 {
                                     cardData.features.map((feature, index) => (
-                                        <div className="h-[50%] border border-border rounded-lg text-[12px] font-bodyfont font-normal py-2 px-3 max-w-max 2xl:text-sm lg:py-1 lg:px-2 lg:text-[12px] xxs:py-1" key={index}>{feature}</div>   
+                                        <div className="border border-border rounded-lg text-[12px] font-bodyfont font-normal py-2 px-3 max-w-max 2xl:text-sm lg:py-1 lg:px-2 lg:text-[12px] xxs:py-1" key={index}>{feature}</div>   
                                     ))
                                 }
                             </div>
