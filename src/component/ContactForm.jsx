@@ -2,14 +2,14 @@
 
 const ContactForm = () => {
   return (
-    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-3xl border border-border shadow-default overflow-hidden p-10 xxs:flex-col xxs:py-2 xxs:px-0 xxs:bg-transparent xxs:border-none xxs:gap-6 xxs:shadow-none">
-      <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16 lg:text-[120px] xxs:text-6xl xxs:flex-row xxs:w-full xxs:pr-0">
+    <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-3xl border border-border shadow-default overflow-hidden p-10 xxxs:flex-col xxxs:py-2 xxxs:px-0 xxxs:bg-transparent xxxs:border-none xxxs:gap-6 xxxs:shadow-none">
+      <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16 lg:text-[120px] xxxs:text-6xl xxxs:flex-row xxxs:w-full xxxs:pr-0">
         <p className="text-center leading-none font-medium">{"Let's"}</p>
         <p className="text-center font-semibold leading-none text-badgeText">Talk!</p>
       </div>
-      <form className="w-[50%] h-full flex flex-col gap-5 bg-card p-6 rounded-2xl border border-border xxs:w-full xxs:bg-none">
-        <div className="flex flex-col gap-2 xxs:gap-1">
-          <label htmlFor="name" className="text-lg xxs:text-[16px]">
+      <form className="w-[50%] h-full flex flex-col gap-5 bg-card p-6 rounded-2xl border border-border xxxs:w-full xxxs:bg-none xxxs:p-4 xxs:p-5">
+        <div className="flex flex-col gap-2 xxxs:gap-1">
+          <label htmlFor="name" className="text-lg xxxs:text-[16px]">
             Name
           </label>
           <input

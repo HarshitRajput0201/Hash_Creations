@@ -17,8 +17,8 @@ const TestimonialBlock = ({TestimonialsData, direction}) => {
   ));
 
   return (
-    <div className={`w-full flex flex-col relative xxs:flex-row xxs:overflow-hidden`}>
-      <div className={`testimonialCard-${direction} xxs:flex xxs:flex-row m-0`}>
+    <div className={`w-full flex flex-col relative xxxs:flex-row xxxs:overflow-hidden`}>
+      <div className={`testimonialCard-${direction} xxxs:flex xxxs:flex-row m-0`}>
         {
           shuffledData.map((cardData) => (
             <TestimonialCard
@@ -32,7 +32,7 @@ const TestimonialBlock = ({TestimonialsData, direction}) => {
           ))
         }
       </div>
-      <div className={`testimonialCard-${direction} xxs:flex xxs:flex-row m-0`}>
+      <div className={`testimonialCard-${direction} xxxs:flex xxxs:flex-row m-0`}>
         {
           shuffledData.map((cardData) => (
             <TestimonialCard

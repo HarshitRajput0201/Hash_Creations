@@ -93,14 +93,14 @@ const NavBar = () => {
   };
 
   return (
-    <div className='w-10/12 mx-auto flex flex-col justify-between items-center sticky top-10 z-50 transition-all duration-200 2xl:max-w-[1440px] xxs:w-11/12 xxs:mx-4 xxs:gap-3 xxs:top-6 xs:top-8 xs:w-10/12'>
-      <div className='navbar w-full flex flex-row justify-between xxs:bg-navBg/50 xxs:bg-clip-padding xxs:backdrop-filter xxs:backdrop-blur-md xxs:bg-opacity-0 xxs:p-4 xxs:border xxs:border-navBorder xxs:rounded-xl'>
+    <div className='w-10/12 mx-auto flex flex-col justify-between items-center sticky top-10 z-50 transition-all duration-200 xxxs:w-11/12 xxxs:top-5 xxs:w-11/12 xxs:gap-3 xxs:top-6 xs:top-8 xs:w-10/12'>
+      <div className='navbar w-full flex flex-row justify-between xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:p-3 xxs:p-4'>
         <div className="flex justify-center items-center">
           <Link to={"/"}>
-              <img className="text-logoBg xxs:w-32 xs:w-36 lg:w-36 xl:w-44" src={Logo} alt="" />
+              <img className="text-logoBg xxxs:w-28 xxs:w-32 xs:w-36 lg:w-36 xl:w-44" src={Logo} alt="" />
           </Link>
         </div>
-        <div className="flex flex-row justify-around items-center border border-navBorder rounded-xl text-navText text-lg gap-1 p-2 bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 xxs:hidden lg:text-sm lg:p-1 xl:text-lg xl:p-2">
+        <div className="flex flex-row justify-around items-center border border-navBorder rounded-xl text-navText text-lg gap-1 p-2 bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 xxxs:hidden lg:text-sm lg:p-1 xl:text-lg xl:p-2">
           <div className={`flex justify-center items-center px-6 py-2 rounded-lg text-heading hover:text-navTextHover  transition-all duration-200 hover:cursor-pointer ${activeSection === 'home' ? 'text-navTextHover bg-navBtnsBG transition-all duration-200' : ''}`}>
             <HashLink to="#home">Home</HashLink>
           </div>
@@ -111,24 +111,24 @@ const NavBar = () => {
             <HashLink to="#work">Work</HashLink>
           </div>
         </div>
-        <div className="flex flex-row justify-between items-center gap-3 xxs:gap-2 xs:gap-3">
+        <div className="flex flex-row justify-between items-center gap-3 xxxs:gap-2 xxs:gap-2 xs:gap-3">
           <button
-            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxs:p-2 xs:p-3"
+            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxxs:p-2 xxs:p-2 xs:p-3"
             onClick={toggleTheme}
           >
-            <img className="h-6 w-6 lg:h-5 lg:w-5 xl:w-6 xl:h-6 xxs:h-5 xxs:w-5 xs:h-6 xs:w-6" src={isDarkMode ? Sun_Icon : Moon_Icon} alt="Nav Toggle Icon" />
+            <img className="h-6 w-6 lg:h-5 lg:w-5 xl:w-6 xl:h-6 xxxs:h-5 xxxs:w-5 xxs:h-5 xxs:w-5 xs:h-6 xs:w-6" src={isDarkMode ? Sun_Icon : Moon_Icon} alt="Nav Toggle Icon" />
           </button>
           <button
-            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxs:p-2 xs:p-3"
+            className="border border-border rounded-lg p-3 hover:cursor-pointer bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 lg:p-2 lg:h-9 lg:w-9 xl:h-12 xl:w-12 xl:p-3 xxxs:p-2 xxs:p-2 xs:p-3"
             onClick={toggleNavbar}
           >
-            <img className="h-6 w-6 lg:h-5 lg:w-5 xl:w-6 xl:h-6 xxs:h-5 xxs:w-5 xs:h-6 xs:w-6" src={getNavIcon(isDarkMode, isNavbarOpen)} alt="Nav Toggle Icon" />
+            <img className="h-6 w-6 lg:h-5 lg:w-5 xl:w-6 xl:h-6 xxxs:h-5 xxxs:w-5 xxs:h-5 xxs:w-5 xs:h-6 xs:w-6" src={getNavIcon(isDarkMode, isNavbarOpen)} alt="Nav Toggle Icon" />
           </button>
-          <div className='flex justify-center items-center xxs:hidden'><CTAButton linkto={"/"}>Lets Talk</CTAButton></div>
+          <div className='flex justify-center items-center xxxs:hidden'><CTAButton linkto={"/"}>Lets Talk</CTAButton></div>
         </div>
       </div>
       {isNavbarOpen && (
-        <div className={`navbar absolute flex flex-col xxs:w-full xxs:bg-navBg/50 xxs:bg-clip-padding xxs:backdrop-filter xxs:backdrop-blur-md xxs:bg-opacity-0 xxs:p-4 xxs:border xxs:border-navBorder xxs:rounded-xl xxs:gap-2 xxs:top-20 xs:text-lg xs:top-24 transition-all duration-300  ${isNavbarOpen ? 'open' : 'closed'}`}>
+        <div className={`navbar absolute flex flex-col xxxs:w-full xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:gap-2 xxxs:top-[72px] xxs:top-20 xxxs:p-3 xxs:p-4 xs:text-lg xs:top-24 transition-all duration-300  ${isNavbarOpen ? 'open' : 'closed'}`}>
           <div className={`h-full flex justify-center items-center px-6 py-2 rounded-lg text-heading hover:text-navTextHover transition-all duration-200 hover:cursor-pointer ${
               activeSection === "home" ? "text-navTextHover bg-navBtnsBG transition-all duration-200" : ""}`}>
             <HashLink className='w-full text-center' to="#home">Home</HashLink>
