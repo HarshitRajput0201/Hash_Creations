@@ -6,9 +6,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        xxxs: { min: "320px"},
-        xxs: { min: "375px" },
-        xs: { min: "480px"},
+        xxxs: { min: "320px", max: "640px"},
+        xxs: { min: "375px", max: "640px" },
+        xs: { min: "480px", max: "640px" },
       },
       colors: {
         background: "rgba(var(--background))",

@@ -163,6 +163,27 @@
 
 }
 
+@media screen and (min-width: 640px) {
+    .item{
+        width: 240px;
+        left: max(calc(210px * 8), 100%);
+    }
+
+    .TestimonialsDiv{
+        mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) );
+    }
+
+    .testimonialCard-down{
+        animation: 160s slideUp infinite linear;
+    }
+
+    .testimonialCard-up{
+        animation: 160s slideDown infinite linear;
+    }
+    
+
+}
+
 @media screen and (min-width: 1024px) {
     .item{
         width: 260px;
