@@ -5,7 +5,7 @@ import ServiceCardBG from "../assets/ServiceCardBG.svg";
 
 const ServiceCards = () => {
   return (
-    <div className="w-10/12 grid grid-cols-3 gap-5 2xl:max-w-[1440px] 2xl:gap-8 xxxs:grid-cols-1 xxxs:w-11/12 xxxs:gap-4 xs:gap-5 xs:w-10/12 sm:w-11/12 sm:grid-cols-2 sm:gap-4">
+    <div className="w-10/12 grid grid-cols-3 gap-5 2xl:max-w-[1440px] 2xl:gap-8 xxxs:grid-cols-1 xxxs:w-11/12 xxxs:gap-4 xs:gap-5 xs:w-10/12 sm:w-11/12 sm:grid-cols-2 sm:gap-4 md:w-10/12 md:max-w-[740px] md:gap-5">
         {
             ServiceCardsData.map((cardData, index) => (
                 <div className="w-full flex justify-center items-center rounded-2xl relative overflow-hidden shadow-default sm:rounded-2xl" key={index}>

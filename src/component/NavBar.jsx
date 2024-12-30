@@ -93,11 +93,11 @@ const NavBar = () => {
   };
 
   return (
-    <div className='w-10/12 mx-auto flex flex-col justify-between items-center sticky top-10 z-50 transition-all duration-200 xxxs:w-11/12 xxxs:top-5 xxs:w-11/12 xxs:gap-3 xxs:top-6 xs:top-8 xs:w-10/12 sm:w-11/12 sm:top-9'>
-      <div className='navbar w-full flex flex-row justify-between xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:p-3 xxs:p-3 sm:bg-navBg/50 sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-opacity-0 sm:border sm:border-navBorder sm:rounded-xl sm:p-4'>
+    <div className='w-10/12 mx-auto flex flex-col justify-between items-center sticky top-10 z-50 transition-all duration-200 xxxs:w-11/12 xxxs:top-5 xxs:w-11/12 xxs:gap-3 xxs:top-6 xs:top-8 xs:w-10/12 sm:w-11/12 sm:top-9 md:w-10/12'>
+      <div className='navbar w-full flex flex-row justify-between xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:p-3 xxs:p-3 sm:bg-navBg/50 sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-opacity-0 sm:border sm:border-navBorder sm:rounded-xl sm:p-3'>
         <div className="flex justify-center items-center">
           <Link to={"/"}>
-              <img className="text-logoBg xxxs:w-28 xxs:w-32 xs:w-36 sm:w-40 lg:w-36 xl:w-44" src={Logo} alt="" />
+              <img className="text-logoBg xxxs:w-28 xxs:w-32 xs:w-36 sm:w-36 lg:w-36 xl:w-44" src={Logo} alt="" />
           </Link>
         </div>
         <div className="flex flex-row justify-around items-center border border-navBorder rounded-xl text-navText text-lg gap-1 p-2 bg-navBg/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 xxxs:hidden sm:hidden lg:text-sm lg:p-1 xl:text-lg xl:p-2">
@@ -128,7 +128,7 @@ const NavBar = () => {
         </div>
       </div>
       {isNavbarOpen && (
-        <div className={`navbar absolute flex flex-col xxxs:w-full xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:gap-2 xxxs:top-[72px] xxs:top-20 xxxs:p-3 xxs:p-4 xs:text-lg xs:top-24 sm:bg-navBg/50 sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-opacity-0 sm:border sm:border-navBorder sm:rounded-xl sm:w-full sm:top-[84px] sm:p-5 sm:text-lg sm:gap-1 transition-all duration-300  ${isNavbarOpen ? 'open' : 'closed'}`}>
+        <div className={`navbar absolute flex flex-col xxxs:w-full xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:gap-2 xxxs:top-[72px] xxs:top-20 xxxs:p-3 xxs:p-4 xs:text-lg xs:top-24 sm:bg-navBg/50 sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-opacity-0 sm:border sm:border-navBorder sm:rounded-xl sm:w-full sm:top-[84px] sm:p-3 sm:text-lg sm:gap-1 transition-all duration-300  ${isNavbarOpen ? 'open' : 'closed'}`}>
           <div className={`h-full flex justify-center items-center px-6 py-2 rounded-lg text-heading hover:text-navTextHover transition-all duration-200 hover:cursor-pointer ${
               activeSection === "home" ? "text-navTextHover bg-navBtnsBG transition-all duration-200" : ""}`}>
             <HashLink className='w-full text-center' to="#home">Home</HashLink>
