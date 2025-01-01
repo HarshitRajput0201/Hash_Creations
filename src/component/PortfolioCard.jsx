@@ -9,9 +9,9 @@ const PortfolioCard = ({imageURL, cardName, cardDescription, cardLink}) => {
         <img className="w-full h-full rounded-2xl object-cover xxxs:rounded-lg sm:rounded-lg" style={{ aspectRatio: '18/10' }} src={imageURL} alt={imageURL} />
       </div>
       <div className="w-full flex flex-row justify-between">
-        <div className="flex flex-col gap-2 lg:gap-1 xxxs:gap-1 sm:gap-0">
-            <p className="text-2xl font-semibold 2xl:text-[28px] lg:text-xl xxxs:text-lg xxs:text-xl xs:text-[22px] sm:text-lg">{cardName}</p>
-            <p className="text-lg font-bodyfont text-textDescription 2xl:text-xl lg:text-[16px] xxxs:text-sm xxs:text-[16px] xs:text-lg sm:text-base">{cardDescription}</p>
+        <div className="flex flex-col gap-2 xxxs:gap-1 sm:gap-0 lg:gap-1">
+            <p className="text-2xl font-semibold 2xl:text-[28px] xxxs:text-lg xxs:text-xl xs:text-[22px] sm:text-lg lg:text-xl">{cardName}</p>
+            <p className="text-lg font-bodyfont text-textDescription 2xl:text-xl xxxs:text-sm xxs:text-[16px] xs:text-lg sm:text-base lg:text-[16px]">{cardDescription}</p>
         </div>
         <div className="flex justify-end items-end ">
             <Link className="border border-border rounded-lg" to={cardLink}>

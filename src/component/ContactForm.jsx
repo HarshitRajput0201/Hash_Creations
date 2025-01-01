@@ -3,7 +3,7 @@
 const ContactForm = () => {
   return (
     <div className="w-full flex flex-row justify-between items-center bg-cardBg rounded-3xl border border-border shadow-default overflow-hidden p-10 xxxs:flex-col xxxs:py-2 xxxs:px-0 xxxs:bg-transparent xxxs:border-none xxxs:gap-6 xxxs:shadow-none sm:p-5">
-      <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16 lg:text-[120px] xxxs:text-6xl xxxs:flex-row xxxs:w-full xxxs:pr-0 sm:text-7xl sm:w-[30%] sm:pr-0">
+      <div className="w-[50%] h-full flex flex-col justify-center items-center text-[160px] pr-16 xxxs:text-6xl xxxs:flex-row xxxs:w-full xxxs:pr-0 sm:text-7xl sm:w-[30%] sm:pr-0 lg:text-[120px]">
         <p className="text-center leading-none font-medium">{"Let's"}</p>
         <p className="text-center font-semibold leading-none text-badgeText">Talk!</p>
       </div>
