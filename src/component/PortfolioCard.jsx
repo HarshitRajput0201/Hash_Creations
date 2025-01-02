@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 
 const PortfolioCard = ({imageURL, cardName, cardDescription, cardLink}) => {
   return (
-    <div className="flex flex-col w-full justify-between items-center gap-5 p-5 rounded-3xl border border-border bg-cardBg shadow-default xxxs:rounded-2xl xxxs:p-3 xxxs:gap-3 xxs:p-4 xxs:gap-4 xs:gap-6 xs:p-5 sm:rounded-2xl sm:p-4 sm:gap-4" style={{ aspectRatio: '14/10' }}>
+    <div className="flex flex-col w-full justify-between items-center gap-5 p-5 rounded-3xl border border-border bg-cardBg shadow-default xxxs:rounded-2xl xxxs:p-3 xxxs:gap-3 xxs:p-4 xxs:gap-4 xs:gap-6 xs:p-5 sm:rounded-2xl sm:p-4 sm:gap-4 xl:gap-5 xl:p-5 xl:rounded-3xl" style={{ aspectRatio: '14/10' }}>
       <div className="w-full flex justify-center items-center">
-        <img className="w-full h-full rounded-2xl object-cover xxxs:rounded-lg sm:rounded-lg" style={{ aspectRatio: '18/10' }} src={imageURL} alt={imageURL} />
+        <img className="w-full h-full rounded-2xl object-cover xxxs:rounded-lg sm:rounded-lg xl:rounded-xl" style={{ aspectRatio: '18/10' }} src={imageURL} alt={imageURL} />
       </div>
       <div className="w-full flex flex-row justify-between">
         <div className="flex flex-col gap-2 xxxs:gap-1 sm:gap-0 lg:gap-1">
-            <p className="text-2xl font-semibold 2xl:text-[28px] xxxs:text-lg xxs:text-xl xs:text-[22px] sm:text-lg lg:text-xl">{cardName}</p>
-            <p className="text-lg font-bodyfont text-textDescription 2xl:text-xl xxxs:text-sm xxs:text-[16px] xs:text-lg sm:text-base lg:text-[16px]">{cardDescription}</p>
+            <p className="text-2xl font-semibold 2xl:text-[28px] xxxs:text-lg xxs:text-xl xs:text-[22px] sm:text-lg lg:text-xl xl:text-[28px]">{cardName}</p>
+            <p className="text-lg font-bodyfont text-textDescription 2xl:text-xl xxxs:text-sm xxs:text-[16px] xs:text-lg sm:text-base lg:text-[16px] xl:text-lg">{cardDescription}</p>
         </div>
         <div className="flex justify-end items-end ">
-            <Link className="border border-border rounded-lg" to={cardLink}>
-                <MdArrowOutward className="w-8 h-8 p-2 2xl:w-10 2xl:h-10 xxxs:p-1 xxxs:w-7 xxxs:h-7 xxs:p-2 xxs:w-8 xxs:h-8 xs:h-9 xs:w-9 sm:h-7 sm:w-7 sm:p-1" />
+            <Link className="border border-border rounded-lg xl:rounded-xl" to={cardLink}>
+                <MdArrowOutward className="w-8 h-8 p-2 2xl:w-10 2xl:h-10 xxxs:p-1 xxxs:w-7 xxxs:h-7 xxs:p-2 xxs:w-8 xxs:h-8 xs:h-9 xs:w-9 sm:h-7 sm:w-7 sm:p-1 xl:w-9 xl:h-9 xl:p-2" />
             </Link>
         </div>
       </div>
