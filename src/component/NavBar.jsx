@@ -93,8 +93,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className='w-10/12 mx-auto flex flex-col justify-between items-center sticky top-10 z-50 transition-all duration-200 xxxs:w-11/12 xxxs:top-5 xxs:w-11/12 xxs:gap-3 xxs:top-6 xs:top-8 xs:w-10/12 sm:w-11/12 sm:top-9 md:w-10/12 '>
-      <div className='navbar w-full flex flex-row justify-between xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:p-3 xxs:p-3 sm:p-3 sm:bg-navBg/50 sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-opacity-0 sm:border sm:border-navBorder sm:rounded-xl md:backdrop-filter-none md:backdrop-blur-none md:bg-opacity-0 md:border-none md:p-3 lg:p-0 lg:bg-transparent lg:disable-clip-padding'>
+    <div className='w-10/12 mx-auto flex flex-col justify-between items-center sticky top-10 z-50 transition-all duration-200 xxxs:w-11/12 xxxs:top-5 xxs:w-11/12 xxs:gap-3 xxs:top-6 xs:top-8 xs:w-10/12 sm:w-11/12 sm:top-9 md:w-10/12 2xl:max-w-[1440px]'>
+      <div className='navbar w-full flex flex-row justify-between xxxs:bg-navBg/50 xxxs:bg-clip-padding xxxs:backdrop-filter xxxs:backdrop-blur-md xxxs:bg-opacity-0 xxxs:border xxxs:border-navBorder xxxs:rounded-xl xxxs:p-3 xxs:p-3 sm:p-3 sm:bg-navBg/50 sm:bg-clip-padding sm:backdrop-filter sm:backdrop-blur-md sm:bg-opacity-0 sm:border sm:border-navBorder sm:rounded-xl md:backdrop-filter-none md:backdrop-blur-none md:bg-opacity-0 md:border-none md:p-3 lg:p-0 lg:bg-transparent lg:disable-clip-padding '>
         <div className="flex justify-center items-center">
           <Link to={"/"}>
               <img className="text-logoBg xxxs:w-28 xxs:w-32 xs:w-36 sm:w-36 lg:w-36 xl:w-40" src={Logo} alt="" />

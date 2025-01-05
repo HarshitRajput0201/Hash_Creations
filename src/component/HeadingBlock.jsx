@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const HeadingBlock = ({badgeheading, mainheading, mainspan, description}) => {
   return (
-    <div className="w-6/12 flex flex-col justify-between items-center text-center gap-4 2xl:max-w-[780px] xxxs:w-11/12 xs:w-10/12 sm:w-9/12 md:w-8/12 lg:w-7/12" >
+    <div className="w-6/12 flex flex-col justify-between items-center text-center gap-4 xxxs:w-11/12 xs:w-10/12 sm:w-9/12 md:w-8/12 lg:w-7/12 2xl:max-w-[780px]" >
       <div className="flex flex-row justify-center gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm 2xl:gap-2 2xl:text-[16px] 2xl:px-6 xxxs:text-[12px] xxxs:py-1 xs:text-[12px] xs:py-1 sm:text-[12px] sm:py-1 lg:text-[12px] lg:px-3 lg:py-1 xl:py-1 xl:px-4">
         <div><RiBox3Fill /></div>
         <p>{badgeheading}</p>

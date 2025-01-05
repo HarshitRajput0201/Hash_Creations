@@ -14,7 +14,7 @@ const ContactCards = () => {
             <div className="w-9 h-9 flex justify-center items-center sm:h-7 sm:w-7 xl:w-9 xl:h-9"><img className="w-full h-full" src={cardData.image} alt="" /></div>
             <div className="w-full flex flex-row justify-between items-end">
               <div className="flex flex-col justify-between items-start gap-1">
-                <p className="text-2xl lg:text-xl xxxs:text-lg xxs:text-xl sm:text-lg xl:text-2xl">{cardData.name}</p>
+                <p className="text-2xl xxxs:text-lg xxs:text-xl sm:text-lg lg:text-xl xl:text-2xl">{cardData.name}</p>
                 <p className="text-lg font-bodyfont text-textDescription xxxs:text-sm xxs:text-base sm:text-sm lg:text-sm xl:text-lg">{cardData.contact}</p>
               </div>
               <Link to={cardData.contactUrl}>
