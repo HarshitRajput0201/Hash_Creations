@@ -24,6 +24,7 @@ import ContactCards from "../component/ContactCards.jsx";
 import ContactForm from "../component/ContactForm.jsx";
 import { FaFacebook, FaInstagram,  FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import CTA_Bg from "../assets/CTA_Bg.svg";
 
 
 
@@ -158,6 +159,25 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="w-full h-full flex justify-center items-center xxxs:my-14 sm:my-16 lg:my-20">
+            <div className="flex justify-start xxxs:w-11/12 xxxs:rounded-xl xxxs:px-7 xxxs:py-20 sm:w-11/12 sm:p-14 sm:rounded-3xl sm:justify-center md:w-10/12 lg:w-10/12 lg:rounded-3xl lg:py-14 xl:py-16 2xl:max-w-[1440px]" 
+            style={{
+                      backgroundImage: `url(${CTA_Bg})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                  }}>
+              <div className="z-10 h-full flex flex-col justify-center xxxs:gap-6 sm:gap-12 lg:items-center lg:gap-10 2xl:max-w-[1100px]">
+                <p className="text-white font-semibold capitalize xxxs:text-left xxxs:text-3xl xxs:text-[32px] xs:text-4xl sm:text-5xl sm:leading-tight sm:text-center lg:text-center lg:text-5xl lg:leading-snug xl:text-[52px] xl:leading-normal 2xl:leading-snug 2xl:text-6xl">Have a Vision for an App or Platform that can make a difference?</p>
+                <div className="flex justify-center items-center xxxs:justify-start">
+                  <a href="/">
+                    <div className="text-lg bg-white text-black xxxs:text-base xxxs:rounded-md xxxs:px-10 xxxs:py-1 sm:text-xl sm:py-2 sm:px-12 sm:rounded-lg lg:px-12 lg:py-2 lg:rounded-lg">
+                      Book a Call
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
         </div>
         <div className="w-full flex flex-col justify-between items-center gap-20 my-24 xxxs:my-14 xxs:my-16 xs:my-20 sm:my-14 xl:gap-20 xl:my-24 2xl:my-28 2xl:gap-24">
           <HeadingBlock badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
