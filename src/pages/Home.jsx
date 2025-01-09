@@ -1,30 +1,32 @@
-import CTAButton from "../component/CTAButton";
-import ImgSlider from "../component/ImgSlider";
-import NavBar from "../component/NavBar";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+
+import CTAButton from "../component/CTAButton.jsx";
+import ImgSlider from "../component/ImgSlider.jsx";
+import NavBar from "../component/NavBar.jsx";
+import ServiceCards from "../component/ServiceCards.jsx";
+import HeadingBlock from "../component/HeadingBlock.jsx";
+import TestimonialBlock from "../component/TestimonialBlock.jsx";
+import ContactCards from "../component/ContactCards.jsx";
+import ContactForm from "../component/ContactForm.jsx";
+import PortfolioCard from "../component/PortfolioCard.jsx";
+
+import PortfolioData from "../data/PortfolioData.js";
+import TestimonialsData from "../data/TestimonialsData.js";
+
+
+import { FaArrowRightLong, FaPeopleGroup, FaXTwitter, FaFacebook, FaInstagram,  FaLinkedin } from "react-icons/fa6";
+import { RiBox3Fill } from "react-icons/ri";
+
+import CTA_Bg from "../assets/CTA_Bg.svg";
 import HeroBG1 from "../assets/HeroBG1.svg";
 import HeroBG2 from "../assets/HeroBG2.svg";
 import HeroLeftCornerBG from "../assets/HeroLeftCornerBG.svg";
 import HeroRightCornerBG from "../assets/HeroRightCornerBG.svg";
-import ServiceCards from "../component/ServiceCards.jsx";
-import HeadingBlock from "../component/HeadingBlock.jsx";
-import { RiBox3Fill } from "react-icons/ri";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import WorkImage from "../assets/WorkImage.png";
-import PortfolioCard from "../component/PortfolioCard.jsx";
-import PortfolioData from "../data/PortfolioData.js";
 import AgencyIcon1 from "../assets/AgencyIcon1.svg";
 import AgencyIcon2 from "../assets/AgencyIcon2.svg";
 import AgencyIcon3 from "../assets/AgencyIcon3.svg";
 import AgencyIcon4 from "../assets/AgencyIcon4.svg";
-import TestimonialBlock from "../component/TestimonialBlock.jsx";
-import TestimonialsData from "../data/TestimonialsData.js";
-import ContactCards from "../component/ContactCards.jsx";
-import ContactForm from "../component/ContactForm.jsx";
-import { FaFacebook, FaInstagram,  FaLinkedin } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import CTA_Bg from "../assets/CTA_Bg.svg";
+import WorkImage from "../assets/WorkImage.png";
 
 
 
