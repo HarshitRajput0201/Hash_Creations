@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -31,13 +33,19 @@ import AgencyIcon3 from "../assets/AgencyIcon3.svg";
 import AgencyIcon4 from "../assets/AgencyIcon4.svg";
 import WorkImage from "../assets/WorkImage.png";
 
+// import { useMouse } from '../component/use-mouse.jsx';
 
+import fluidCursor from '../hooks/useFluidCursor.jsx';
 
 
 
 const Home = () => {
 
   gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    fluidCursor();
+  }, []);
 
   useGSAP(() => {
     const herotl = gsap.timeline();
@@ -189,9 +197,11 @@ const Home = () => {
 
 
 
-
   return (
-    <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative transition-all duration-200">
+    <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative transition-all duration-200 ">
+      <div className="fixed top-0 left-0 z-2">
+      <canvas id="fluid" className="w-screen h-screen" />
+    </div>
       <div className="flex flex-col items-center w-full relative z-10" >
         <div className="absolute w-full h-[300px] z-0 xxxs:h-[170px] sm:h-[280px] lg:h-[240px] xl:h-[300px]" id="home"><img className="absolute w-full h-[300px] z-0 object-cover xxxs:h-[170px] sm:h-[280px] lg:h-[240px] xl:h-[300px]"  src={HeroBG1} alt="HeroBG1" /></div>
         <img className="absolute w-full h-[300px] top-[500px] object-cover z-0 xxs:top-[580px] xxxs:h-[170px] xs:top-[680px] sm:h-[180px] sm:top-[620px] md:h-[220px] md:top-[580px] lg:top-[440px] xl:top-[480px] xl:h-[360px]" src={HeroBG2} alt="HeroBG2" />
@@ -201,8 +211,8 @@ const Home = () => {
         <div className="flex flex-col w-10/12 mt-36 z-10 xxxs:w-11/12 xxxs:mt-20 xxs:mt-24 xs:w-10/12 xs:mt-28 sm:w-11/12 sm:mt-28 md:w-10/12 lg:mt-32 xl:mt-36 2xl:max-w-[1440px] 2xl:mt-40">
           <div className="w-full flex flex-col justify-between items-center gap-16 xxxs:items-start xs:gap-20 sm:gap-12 lg:gap-20 xl:gap-16  2xl:gap-20">
             <div className=" w-9/12 flex flex-col items-center gap-6 xxxs:w-full xxxs:gap-4 xs:gap-5 sm:w-10/12 sm:gap-4 lg:w-9/12 lg:max-w-[640px] lg:gap-5 xl:gap-6 xl:w-10/12 xl:max-w-full 2xl:gap-8 2xl:w-10/12 2xl:max-w-[1100px]">
-              <h1 className="hero-h1-1 text-[64px] leading-tight text-textHeading text-center capitalize font-semibold xxxs:text-start xxxs:text-[28px] xxs:text-[32px] xs:text-[38px] sm:text-[38px] md:text-[42px] lg:text-[48px] xl:text-[64px] 2xl:text-[68px]">Transforming Business with Cutting-Edge Solution</h1>
-              <p className="hero-p-2 w-6/12 text-lg text-textDescription text-center xxxs:text-start xxxs:w-full xxxs:text-sm xxs:text-[16px] xs:text-[20px] sm:w-10/12 sm:text-lg md:w-9/12 lg:w-8/12 xl:w-6/12 xl:max-w-[450px] 2xl:text-xl">We Create Custom Software, Mobile Apps, and Seamless UI/UX Designs</p>
+              <h1 className="hero-h1-1 text-[64px] leading-tight text-textHeading text-center capitalize font-semibold xxxs:text-start xxxs:text-[28px] xxs:text-[32px] xs:text-[38px] sm:text-[38px] md:text-[42px] lg:text-[48px] xl:text-[64px] 2xl:text-[68px]">We transform your ideas for websites and apps into reality</h1>
+              <p className="hero-p-2 w-6/12 text-lg text-textDescription text-center xxxs:text-start xxxs:w-full xxxs:text-sm xxs:text-[16px] xs:text-[20px] sm:w-10/12 sm:text-lg md:w-9/12 lg:w-6/12 xl:w-8/12 xl:max-w-[450px] 2xl:max-w-[600px] 2xl:w-7/12 2xl:text-xl">We specialize in crafting a unique digital presence that helps businesses grow and stand out in their industries</p>
             </div>
             <div className="hero-btn-3 flex justify-center items-start">
               <CTAButton linkto="/">
@@ -218,7 +228,7 @@ const Home = () => {
           <ImgSlider/>
         </div>
         <div className="sl-service w-full flex flex-col justify-between items-center pt-40 gap-20 mb-24 xxxs:pt-28 xxxs:gap-14 xxxs:mb-14 xxs:pt-32 xxs:gap-16 xxs:mb-16 xs:mb-20 xs:pt-36 sm:mb-14 sm:pt-32 lg:gap-16 lg:pt-28 xl:pt-36 xl:gap-20 xl:mb-24 2xl:gap-24" id="services">
-          <HeadingBlock className={"sl-headBlock-1"} badgeheading={"OUR SERVICES"} mainheading={"Explore Our Core"} mainspan={"Services"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
+          <HeadingBlock className={"sl-headBlock-1"} badgeheading={"OUR SERVICES"} mainheading={"Discover Our "} mainspan={"Expertise"} description={"With expertise and precision, we deliver quality solutions that set new benchmarks for success"} />
           <ServiceCards />
         </div>
         <div className="sl-benefits w-full h-full flex justify-center items-center mt-24 mb-4 xxxs:flex-col-reverse xxxs:gap-14 xxxs:mt-14 xxs:gap-16 xxs:mt-16 xs:mt-20 sm:flex-col-reverse sm:gap-16 sm:mb-14 lg:flex-row xl:mt-24 xl:mb-4 2xl:mt-28">
@@ -230,26 +240,26 @@ const Home = () => {
                   <p>OUR WORK</p>
                 </div>
                 <div className="flex flex-col justify-between items-start gap-3 lg:gap-3 2xl:gap-4">
-                  <p className="sl-benefits-3 text-4xl font-semibold lg:text-[32px] xl:text-4xl 2xl:text-[40px]">What Will You Get From Us</p>
-                  <p className="sl-benefits-4 font-bodyfont text-lg text-textDescription lg:text-sm xl:text-lg 2xl:text-xl">Delivering web, app, and design solutions that empower your brand and captivate your audience.</p>
+                  <p className="sl-benefits-3 text-4xl font-semibold lg:text-[32px] xl:text-4xl 2xl:text-[40px]">What Sets Techwara Apart?</p>
+                  <p className="sl-benefits-4 font-bodyfont text-lg text-textDescription lg:text-sm xl:text-lg 2xl:text-xl">At Techwara, we don’t just deliver services—we craft tailored solutions designed to meet your unique needs. With a focus on measurable outcomes, we ensure your business achieves growth, engagement, and long-term success.</p>
                 </div> 
               </div>
               <div className="w-full grid grid-cols-2 gap-4 xxxs:gap-3 xxs:gap-4 xs:gap-5 sm:grid-cols-4 lg:grid-cols-2 2xl:gap-5">
                 <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 sm:p-3 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Responsive and Mobile-First Design</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Strategic Approach: Aligning plans with your goals.</div>
                 </div>
                 <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Responsive and Mobile-First Design</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Seamless Collaboration: Your vision, our priority</div>
                 </div>
                 <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Responsive and Mobile-First Design</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Innovative Execution: Your vision, our priority</div>
                 </div>
                 <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Responsive and Mobile-First Design</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Results-Driven: Delivering success that counts</div>
                 </div>
               </div>
             </div>
