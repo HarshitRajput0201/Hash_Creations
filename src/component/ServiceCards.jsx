@@ -27,7 +27,7 @@ const ServiceCards = () => {
     <div className="w-10/12 grid grid-cols-3 gap-5 xxxs:grid-cols-1 xxxs:w-11/12 xxxs:gap-4 xs:gap-5 xs:w-10/12 sm:w-11/12 sm:grid-cols-2 sm:gap-4 md:w-10/12 md:max-w-[740px] md:gap-5 lg:w-10/12 lg:max-w-full lg:grid-cols-3 xl:gap-5  2xl:max-w-[1440px] 2xl:gap-8">
         {
             ServiceCardsData.map((cardData, index) => (
-                <div className="sl-serviceCard container bg-border w-full flex justify-center items-center rounded-2xl relative overflow-hidden shadow-default xxxs:rounded-[15px] sm:rounded-2xl xl:rounded-[24px] xl:min-h-[300px] lg:p-[1px]" key={index}>
+                <div className="sl-serviceCard container bg-border w-full flex justify-center items-center rounded-2xl relative overflow-hidden shadow-default xxxs:rounded-2xl sm:rounded-2xl xl:rounded-[24px] xl:min-h-[300px] lg:p-[1px]" key={index}>
                     <div className="gradient-bg absolute inset-0 z-0 xxxs:hidden sm:hidden lg:flex lg:rounded-2xl xl:rounded-3xl"></div>
                     <div className="s-card w-full h-full flex flex-col justify-between gap-6 rounded-3xl p-7 border border-border bg-cardBg transition-all backdrop-blur-md relative xxxs:p-4 xxxs:rounded-2xl xs:p-6 xs:gap-8 sm:rounded-2xl sm:p-5 lg:p-5 lg:border-transparent xl:rounded-3xl 2xl:gap-10 2xl:p-8">
                         <div className="flex flex-col justify-between items-center gap-4 xs:gap-6 sm:gap-4 lg:gap-4 2xl:gap-5">

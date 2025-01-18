@@ -23,10 +23,10 @@ const ServiceCardsData = [
       name: "E-Commerce Sites",
       description: "We create powerful e-commerce websites that boost sales and offer seamless shopping experiences.",
       features: [
-          "Online Store Design", 
-          "Shopping Cart Integration", 
-          "Payment Gateway Setup", 
-          "Product Catalog Design", 
+          "Custom Storefronts",
+            "Cart Integration",
+            "Secure Payments",
+            "Dynamic Catalogs", 
       ],
   },
   {
@@ -53,10 +53,10 @@ const ServiceCardsData = [
       name: "Custom Development",
       description: "We create tailored development solutions that meet your unique business needs and set you apart from the competition.",
       features: [
-          "Tailored Web Development", 
-          "Custom Software Solutions", 
-          "Web App Development", 
-          "API Integration"
+          "Tailored Websites",
+            "Custom Software",
+            "Web Apps",
+            "API Solutions"
       ],
   },
 ];

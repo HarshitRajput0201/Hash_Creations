@@ -201,7 +201,7 @@ const Home = () => {
           <div className="w-full flex flex-col justify-between items-center gap-16 xxxs:items-start xs:gap-20 sm:gap-12 lg:gap-20 xl:gap-16  2xl:gap-20">
             <div className=" w-9/12 flex flex-col items-center gap-6 xxxs:w-full xxxs:gap-4 xs:gap-5 sm:w-10/12 sm:gap-4 lg:w-9/12 lg:max-w-[640px] lg:gap-5 xl:gap-6 xl:w-10/12 xl:max-w-full 2xl:gap-8 2xl:w-10/12 2xl:max-w-[1100px]">
               <h1 className="hero-h1-1 text-[64px] leading-tight text-textHeading text-center capitalize font-semibold xxxs:text-start xxxs:text-[28px] xxs:text-[32px] xs:text-[38px] sm:text-[38px] md:text-[42px] lg:text-[48px] xl:text-[64px] 2xl:text-[68px]">We transform your ideas for websites and apps into reality</h1>
-              <p className="hero-p-2 w-6/12 text-lg text-textDescription text-center xxxs:text-start xxxs:w-full xxxs:text-sm xxs:text-[16px] xs:text-[20px] sm:w-10/12 sm:text-lg md:w-9/12 lg:w-6/12 xl:w-8/12 xl:max-w-[450px] 2xl:max-w-[600px] 2xl:w-7/12 2xl:text-xl">We specialize in crafting a unique digital presence that helps businesses grow and stand out in their industries</p>
+              <p className="hero-p-2 w-6/12 text-lg font-bodyfont text-textDescription text-center xxxs:text-start xxxs:w-full xxxs:text-sm xxs:text-[16px] xs:text-[20px] sm:w-10/12 sm:text-lg md:w-9/12 lg:w-6/12 xl:w-8/12 xl:max-w-[450px] 2xl:max-w-[600px] 2xl:w-7/12 2xl:text-xl">We specialize in crafting a unique digital presence that helps businesses grow and stand out in their industries</p>
             </div>
             <div className="hero-btn-3 flex justify-center items-start">
               <CTAButton linkto="/">
@@ -236,28 +236,28 @@ const Home = () => {
               <div className="w-full grid grid-cols-2 gap-4 xxxs:gap-3 xxs:gap-4 xs:gap-5 sm:grid-cols-4 lg:grid-cols-2 2xl:gap-5">
                 <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 sm:p-3 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                  <div className="flex flex-wrap font-bodyfont xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
                     <div className='font-extrabold'>Strategic Approach</div>
                     <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Aligning plans with your goals</div>
                   </div>
                 </div>
                 <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                  <div className="flex flex-wrap font-bodyfont xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
                     <div className='font-extrabold'>Seamless Collaboration</div>
                     <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Your vision, Our priority</div>
                   </div>
                 </div>
                 <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                  <div className="flex flex-wrap font-bodyfont xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
                     <div className='font-extrabold'>Innovative Execution</div>
                     <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Your vision, our priority</div>
                   </div>
                 </div>
                 <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4  xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                  <div className="flex flex-wrap font-bodyfont xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
                     <div className='font-extrabold '>Results-Driven</div>
                     <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Delivering success that counts</div>
                   </div>
