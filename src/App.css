@@ -55,6 +55,11 @@
     mask-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) );
 }
 
+.container{
+    background-color:#ffffff15;
+}
+
+
 @keyframes slideUp {
     from {
       transform: translateY(0);
@@ -226,6 +231,8 @@
         width: 350px;
         left: max(calc(320px * 8), 100%);
     }
+    
+    
 }
 
 

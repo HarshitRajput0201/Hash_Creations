@@ -4,48 +4,36 @@ const ServiceCardsData = [
       description: "We create high-converting landing pages that capture attention and drive your business forward.",
       features: [
           "High-Converting Landing Pages", 
-          "User Engagement", 
-          "Lead Generation", 
-          "Conversion Optimization", 
+          "User Engagement",  
           "Responsive Design", 
-          "Interactive Design", 
-          "Call-to-Action Optimization"
+          "Interactive Design",
       ],
   },
   {
       name: "App Design",
       description: "We create intuitive app designs that enhance user experience and keep your audience engaged.",
       features: [
-          "User Interface (UI) Design", 
-          "User Experience (UX)", 
-          "Mobile App Design", 
-          "Cross-Platform Design", 
-          "App Wireframes", 
-          "App Prototyping", 
-          "Intuitive Navigation"
+          "User Interface", 
+          "User Experience", 
+          "App Prototyping",
+          "Cross Platform Design"
       ],
   },
   {
       name: "E-Commerce Sites",
       description: "We create powerful e-commerce websites that boost sales and offer seamless shopping experiences.",
       features: [
-          "E-Commerce Development", 
           "Online Store Design", 
           "Shopping Cart Integration", 
           "Payment Gateway Setup", 
           "Product Catalog Design", 
-          "Secure Transactions", 
-          "User-Friendly Checkout Process"
       ],
   },
   {
       name: "Framer Development",
       description: "We create interactive prototypes with Framer that bring your ideas to life and elevate user interactions.",
       features: [
-          "Interactive Prototypes", 
-          "Framer Design", 
-          "Web Development Tools", 
-          "User Interface Prototyping", 
+          "Interactive Prototypes",  
           "Motion Design", 
           "Web Animation", 
           "Design Systems"
@@ -58,10 +46,7 @@ const ServiceCardsData = [
           "Brand Identity", 
           "Custom Logo Design", 
           "Visual Brand Representation", 
-          "Logo Branding", 
-          "Minimalist Logo Design", 
-          "Iconic Logos", 
-          "Professional Design"
+          "Iconic Logos"
       ],
   },
   {
@@ -71,10 +56,7 @@ const ServiceCardsData = [
           "Tailored Web Development", 
           "Custom Software Solutions", 
           "Web App Development", 
-          "API Integration", 
-          "Database Management", 
-          "Scalable Solutions", 
-          "Cloud-Based Development"
+          "API Integration"
       ],
   },
 ];

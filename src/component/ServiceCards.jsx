@@ -1,16 +1,35 @@
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceCardsData from "../data/ServiceCardData.js";
-import ServiceCardBG from "../assets/ServiceCardBG.svg";
 
 const ServiceCards = () => {
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+          const gradients = document.querySelectorAll('.gradient-bg');
+          gradients.forEach((gradient) => {
+            const rect = gradient.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            gradient.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(131, 86, 251, 1) 1%, rgba(148, 108, 255, 1) 13%, rgba(121, 83, 223, 1) 25%, transparent 50%)`;
+          });
+        };
+    
+        document.addEventListener('mousemove', handleMouseMove);
+    
+        return () => {
+          document.removeEventListener('mousemove', handleMouseMove);
+        };
+      }, []);
+
   return (
     <div className="w-10/12 grid grid-cols-3 gap-5 xxxs:grid-cols-1 xxxs:w-11/12 xxxs:gap-4 xs:gap-5 xs:w-10/12 sm:w-11/12 sm:grid-cols-2 sm:gap-4 md:w-10/12 md:max-w-[740px] md:gap-5 lg:w-10/12 lg:max-w-full lg:grid-cols-3 xl:gap-5  2xl:max-w-[1440px] 2xl:gap-8">
         {
             ServiceCardsData.map((cardData, index) => (
-                <div className="sl-serviceCard w-full flex justify-center items-center rounded-2xl relative overflow-hidden shadow-default sm:rounded-2xl xl:rounded-3xl xl:min-h-[300px]" key={index}>
-                    <img className="absolute right-0 top-0 z-0 sm:h-44" src={ServiceCardBG} alt="" />
-                    <div className="w-full h-full flex flex-col justify-between gap-6 rounded-2xl p-7 border border-border bg-cardBg 2xl:gap-10 2xl:p-8 xxxs:p-4 xs:p-6 xs:gap-8 sm:rounded-2xl sm:p-5 lg:p-5 xl:rounded-3xl">
+                <div className="sl-serviceCard container bg-border w-full flex justify-center items-center rounded-2xl relative overflow-hidden shadow-default xxxs:rounded-[15px] sm:rounded-2xl xl:rounded-[24px] xl:min-h-[300px] lg:p-[1px]" key={index}>
+                    <div className="gradient-bg absolute inset-0 z-0 xxxs:hidden sm:hidden lg:flex lg:rounded-2xl xl:rounded-3xl"></div>
+                    <div className="s-card w-full h-full flex flex-col justify-between gap-6 rounded-3xl p-7 border border-border bg-cardBg transition-all backdrop-blur-md relative xxxs:p-4 xxxs:rounded-2xl xs:p-6 xs:gap-8 sm:rounded-2xl sm:p-5 lg:p-5 lg:border-transparent xl:rounded-3xl 2xl:gap-10 2xl:p-8">
                         <div className="flex flex-col justify-between items-center gap-4 xs:gap-6 sm:gap-4 lg:gap-4 2xl:gap-5">
                             <div className="w-full flex flex-col justify-between items-start gap-2 2xl:gap-3 sm:gap-1">
                                 <p className="text-[28px] font-semibold xxxs:text-2xl xxs:text-[28px] xs:text-[32px] sm:text-2xl lg:text-[22px] xl:text-[28px] 2xl:text-[32px]">{cardData.name}</p>

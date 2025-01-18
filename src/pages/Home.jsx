@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -33,19 +32,12 @@ import AgencyIcon3 from "../assets/AgencyIcon3.svg";
 import AgencyIcon4 from "../assets/AgencyIcon4.svg";
 import WorkImage from "../assets/WorkImage.png";
 
-// import { useMouse } from '../component/use-mouse.jsx';
-
-import fluidCursor from '../hooks/useFluidCursor.jsx';
 
 
 
 const Home = () => {
 
   gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    fluidCursor();
-  }, []);
 
   useGSAP(() => {
     const herotl = gsap.timeline();
@@ -199,9 +191,6 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative transition-all duration-200 ">
-      <div className="fixed top-0 left-0 z-2">
-      <canvas id="fluid" className="w-screen h-screen" />
-    </div>
       <div className="flex flex-col items-center w-full relative z-10" >
         <div className="absolute w-full h-[300px] z-0 xxxs:h-[170px] sm:h-[280px] lg:h-[240px] xl:h-[300px]" id="home"><img className="absolute w-full h-[300px] z-0 object-cover xxxs:h-[170px] sm:h-[280px] lg:h-[240px] xl:h-[300px]"  src={HeroBG1} alt="HeroBG1" /></div>
         <img className="absolute w-full h-[300px] top-[500px] object-cover z-0 xxs:top-[580px] xxxs:h-[170px] xs:top-[680px] sm:h-[180px] sm:top-[620px] md:h-[220px] md:top-[580px] lg:top-[440px] xl:top-[480px] xl:h-[360px]" src={HeroBG2} alt="HeroBG2" />
@@ -233,7 +222,7 @@ const Home = () => {
         </div>
         <div className="sl-benefits w-full h-full flex justify-center items-center mt-24 mb-4 xxxs:flex-col-reverse xxxs:gap-14 xxxs:mt-14 xxs:gap-16 xxs:mt-16 xs:mt-20 sm:flex-col-reverse sm:gap-16 sm:mb-14 lg:flex-row xl:mt-24 xl:mb-4 2xl:mt-28">
           <div className="w-10/12 h-full flex flex-row justify-between gap-10 xxxs:w-11/12 xxxs:flex-col-reverse xxxs:gap-5 xxs:gap-6 xs:gap-7 xs:w-10/12 sm:w-11/12 sm:flex-col-reverse sm:gap-4 md:w-10/12 lg:flex-row lg:gap-8 xl:gap-10 2xl:max-w-[1440px]">
-            <div className="w-[50%] flex flex-col justify-between items-center gap-12 xxxs:w-full sm:w-full lg:gap-8 2xl:gap-14">
+            <div className="w-[55%] flex flex-col justify-between items-center gap-12 xxxs:w-full sm:w-full lg:gap-8 2xl:gap-14">
               <div className="w-full flex flex-col justify-between items-start gap-6 xxxs:hidden sm:hidden lg:flex lg:gap-5 2xl:gap-7">
                 <div className="sl-benefits-2 flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm lg:text-[12px] lg:py-1 lg:px-3 xl:px-4 2xl:text-[16px] 2xl:px-6">
                   <div><RiBox3Fill /></div>
@@ -245,25 +234,37 @@ const Home = () => {
                 </div> 
               </div>
               <div className="w-full grid grid-cols-2 gap-4 xxxs:gap-3 xxs:gap-4 xs:gap-5 sm:grid-cols-4 lg:grid-cols-2 2xl:gap-5">
-                <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
+                <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 sm:p-3 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Strategic Approach: Aligning plans with your goals.</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                    <div className='font-extrabold'>Strategic Approach</div>
+                    <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Aligning plans with your goals</div>
+                  </div>
                 </div>
-                <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
+                <div className="sl-benefits-5 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Seamless Collaboration: Your vision, our priority</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                    <div className='font-extrabold'>Seamless Collaboration</div>
+                    <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Your vision, Our priority</div>
+                  </div>
                 </div>
-                <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
+                <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Innovative Execution: Your vision, our priority</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                    <div className='font-extrabold'>Innovative Execution</div>
+                    <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Your vision, our priority</div>
+                  </div>
                 </div>
-                <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:flex-col sm:items-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
+                <div className="sl-benefits-6 flex flex-row justify-between items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:flex-col xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4  xs:p-5 sm:flex-col sm:items-start sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5">
                   <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg text-workIconText xxs:p-2 lg:p-2 xl:p-3"><FaPeopleGroup className="w-6 h-6 lg:w-5 lg:h-5 xxxs:h-4 xxxs:w-4 xs:h-6 xs:w-6 sm:w-5 sm:h-5 xl:h-6 xl:w-6 2xl:w-7 2xl:h-7" /></div>
-                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-base">Results-Driven: Delivering success that counts</div>
+                  <div className="flex flex-wrap xxxs:text-[12px] xxs:text-sm xs:text-base sm:text-sm lg:text-[12px] lg:leading-4 xl:text-sm">
+                    <div className='font-extrabold '>Results-Driven</div>
+                    <div className='lg:text-[10px] xl:text-[12px] 2xl:text-sm'>Delivering success that counts</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="sl-benefits-1 w-[50%] flex justify-center items-center rounded-3xl overflow-hidden xxxs:w-full xxxs:rounded-2xl sm:w-full sm:rounded-2xl xl:rounded-3xl">
+            <div className="sl-benefits-1 w-[45%] flex justify-center items-center rounded-3xl overflow-hidden xxxs:w-full xxxs:rounded-2xl sm:w-full sm:rounded-2xl xl:rounded-3xl">
               <img className="w-full h-full object-cover" src={WorkImage} alt="" />
             </div>
           </div>

@@ -17,7 +17,7 @@ const HeadingBlock = ({className, badgeheading, mainheading, mainspan, descripti
 }
 
 HeadingBlock.propTypes = {
-    className: PropTypes.string.isRequired,
+  className: PropTypes.string,
     badgeheading: PropTypes.string.isRequired,
     mainheading: PropTypes.string.isRequired,
     mainspan: PropTypes.string,
