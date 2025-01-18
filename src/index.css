@@ -5,13 +5,6 @@
 @tailwind utilities;
 
 
-@font-face {
-  font-family: 'Rethink Sans';
-  src: url('/path-to-font/rethinksans.woff2') format('woff2'),
-       url('/path-to-font/rethinksans.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
