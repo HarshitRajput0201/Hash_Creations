@@ -1,4 +1,3 @@
-import { RiBox3Fill } from 'react-icons/ri';
 import PropTypes from 'prop-types';
 import WorkImage from '../assets/WorkImage.png';
 import AgencyIcon1 from '../assets/AgencyIcon1.svg'; 
@@ -47,14 +46,17 @@ const agencyServices = [
     title: PropTypes.string.isRequired,   // Title should be a string
     description: PropTypes.string.isRequired, // Description should be a string
   };
+  
+ 
 
-  const Agency = () => (
+  const Agency = ({badgeicon}) => (
     <div className="sl-agency w-full h-full flex justify-center items-center my-24 xxxs:flex-col xxxs:gap-14 xxxs:my-14 xxs:gap-16 xxs:my-16 xs:my-20 sm:flex-col sm:gap-16 sm:my-14 lg:flex-row xl:my-24 2xl:my-28">
       <div className="flex w-full items-center justify-center lg:hidden">
         <HeadingBlock
-          badgeheading="OUR SERVICES"
-          mainheading="Explore Our Core"
-          mainspan="Services"
+          badgeheading="OUR PROCESS"
+          badgeicon={badgeicon}
+          mainheading="What’s Different In Our Agency"
+          mainspan=""
           description="Delivering web, app, and design solutions that empower your brand and captivate your audience."
         />
       </div>
@@ -64,9 +66,9 @@ const agencyServices = [
         </div>
         <div className="w-[50%] flex flex-col justify-between items-center gap-12 xxxs:w-full sm:w-full lg:gap-8 xl:gap-12 2xl:gap-14">
           <div className="w-full flex flex-col justify-between items-start gap-6 xxxs:hidden sm:hidden lg:flex lg:gap-5 xl:gap-6 2xl:gap-7">
-            <div className="sl-agency-2 flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm lg:text-[12px] lg:py-1 lg:px-3 2xl:text-[16px] 2xl:px-6">
-              <RiBox3Fill />
-              <p>OUR WORK</p>
+            <div className="sl-agency-2 flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG rounded-full text-badgeText border border-border text-sm lg:text-[12px] lg:py-1 lg:px-3 2xl:text-[16px] 2xl:px-6 2xl:py-3">
+              <div className='flex justify-center items-center'><img className="2xl:h-4 2xl:w-4" src={badgeicon} alt="" /></div>
+              <p>OUR PROCESS</p>
             </div>
             <div className="flex flex-col justify-between items-start gap-3 lg:gap-3 2xl:gap-4">
               <p className="sl-agency-3 text-4xl font-semibold lg:text-[32px] xl:text-4xl 2xl:text-[40px]">
@@ -91,5 +93,11 @@ const agencyServices = [
       </div>
     </div>
   );
+  
+  Agency.propTypes = {
+    badgeicon: PropTypes.string.isRequired,
+  };
+ 
 
 export default Agency;
+

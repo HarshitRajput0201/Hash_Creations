@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -26,11 +27,46 @@ import HeroBG1 from "../assets/HeroBG1.svg";
 import HeroBG2 from "../assets/HeroBG2.svg";
 import HeroLeftCornerBG from "../assets/HeroLeftCornerBG.svg";
 import HeroRightCornerBG from "../assets/HeroRightCornerBG.svg";
-
-
+import ServiceBadgeDark from '../assets/ServiceBadgeDark.svg';
+import ServiceBadgeLight from '../assets/ServiceBadgeLight.svg';
+import ContactBadgeDark from '../assets/contactBadgeDark.svg';
+import ContactBadgeLight from '../assets/contactBadgeLight.svg';
+import AboutUsBadgeDark from '../assets/aboutusbadgeDark.svg';
+import AboutUsBadgeLight from '../assets/aboutusbadgeLight.svg';
+import ProcessBadgeDark from '../assets/processBadgeDark.svg';
+import ProcessBadgeLight from '../assets/processBadgeLight.svg';
+import TestimonialBadgeDark from '../assets/testimonialBadgeDark.svg';
+import TestimonialBadgeLight from '../assets/testimonialBadgeLight.svg';
+import WorkBadgeDark from '../assets/workBadgeDark.svg';
+import WorkBadgeLight from '../assets/workBadgeLight.svg';
 
 
 const Home = () => {
+
+
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Initialize theme based on localStorage or system preference
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      return storedTheme === "dark";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDarkMode]);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -180,8 +216,6 @@ const Home = () => {
   }, []);
 
 
-
-
   return (
     <div className="flex flex-col items-center w-full font-headingfont bg-background text-textHeading relative transition-all duration-200 ">
       <div className="flex flex-col items-center w-full relative z-10" >
@@ -189,7 +223,7 @@ const Home = () => {
         <img className="absolute w-full h-[300px] top-[500px] object-cover z-0 xxs:top-[580px] xxxs:h-[170px] xs:top-[680px] sm:h-[180px] sm:top-[620px] md:h-[220px] md:top-[580px] lg:top-[440px] xl:top-[480px] xl:h-[360px]" src={HeroBG2} alt="HeroBG2" />
         <img className="absolute left-0 z-0 xxxs:h-[170px] xxs:h-[190px] sm:h-[220px] lg:h-[320px]" src={HeroLeftCornerBG} alt="HeroLeftCornerBG" />
         <img className="absolute right-0 z-0 xxxs:h-[170px] xxs:h-[190px] sm:h-[220px] lg:h-[320px]" src={HeroRightCornerBG} alt="HeroRightCornerBG" />
-        <NavBar/>
+        <NavBar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <div className="flex flex-col w-10/12 mt-36 z-10 xxxs:w-11/12 xxxs:mt-20 xxs:mt-24 xs:w-10/12 xs:mt-28 sm:w-11/12 sm:mt-28 md:w-10/12 lg:mt-32 xl:mt-36 2xl:max-w-[1440px] 2xl:mt-40">
           <div className="w-full flex flex-col justify-between items-center gap-16 xxxs:items-start xs:gap-20 sm:gap-12 lg:gap-20 xl:gap-16  2xl:gap-20">
             <div className=" w-9/12 flex flex-col items-center gap-6 xxxs:w-full xxxs:gap-4 xs:gap-5 sm:w-10/12 sm:gap-4 lg:w-9/12 lg:max-w-[640px] lg:gap-5 xl:gap-6 xl:w-10/12 xl:max-w-full 2xl:gap-8 2xl:w-10/12 2xl:max-w-[1100px]">
@@ -210,14 +244,12 @@ const Home = () => {
           <ImgSlider/>
         </div>
         <div className="sl-service w-full flex flex-col justify-between items-center pt-40 gap-20 mb-24 xxxs:pt-28 xxxs:gap-14 xxxs:mb-14 xxs:pt-32 xxs:gap-16 xxs:mb-16 xs:mb-20 xs:pt-36 sm:mb-14 sm:pt-32 lg:gap-16 lg:pt-28 xl:pt-36 xl:gap-20 xl:mb-24 2xl:gap-24" id="services">
-          <HeadingBlock className={"sl-headBlock-1"} badgeheading={"OUR SERVICES"} mainheading={"Discover Our "} mainspan={"Expertise"} description={"With expertise and precision, we deliver quality solutions that set new benchmarks for success"} />
+          <HeadingBlock className={"sl-headBlock-1"} badgeicon={!isDarkMode ? ServiceBadgeDark : ServiceBadgeLight} badgeheading={"OUR SERVICES"} mainheading={"Discover Our "} mainspan={"Expertise"} description={"With expertise and precision, we deliver quality solutions that set new benchmarks for success"} />
           <ServiceCards />
         </div>
-        <div>
-          <Benefits />
-        </div>
+        <Benefits badgeicon={!isDarkMode ? AboutUsBadgeDark : AboutUsBadgeLight} />
         <div className="sl-portfolio w-full flex flex-col justify-between items-center gap-20 mb-24 pt-40 xxxs:pt-28 xxxs:gap-14 xxxs:mb-14 xxs:pt-32 xxs:gap-16 xxs:mb-16 xs:mb-20 xs:pt-36 sm:mb-14 sm:pt-32 sm:gap-16 lg:gap-16 lg:pt-28 xl:gap-20 xl:mb-24 xl:pt-36 2xl:gap-24" id="work">
-          <HeadingBlock className={"sl-pf-headBlock-1"} badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
+          <HeadingBlock className={"sl-pf-headBlock-1"} badgeicon={!isDarkMode ? WorkBadgeDark : WorkBadgeLight} badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
           <div className="sl-pf-card-2 w-10/12 grid grid-cols-2 gap-5 xxxs:grid-cols-1 xxxs:w-11/12 xxxs:gap-4 xxs:gap-5 xs:w-10/12 sm:w-11/12 sm:grid-cols-2 sm:gap-4 md:w-10/12 xl:gap-5 xl:max-w-[1100px] 2xl:gap-8 2xl:max-w-[1440px]">
             {
               PortfolioData.map((cardData, index) => (
@@ -226,57 +258,7 @@ const Home = () => {
             }        
           </div>
         </div>
-        {/* <div className="sl-agency w-full h-full flex justify-center items-center my-24 xxxs:flex-col xxxs:gap-14 xxxs:my-14 xxs:gap-16 xxs:my-16 xs:my-20 sm:flex-col sm:gap-16 sm:my-14 lg:flex-row xl:my-24 2xl:my-28">
-          <div className="flex w-full items-center justify-center lg:hidden"><HeadingBlock badgeheading={"OUR SERVICES"} mainheading={"Explore Our Core"} mainspan={"Services"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."}/></div>
-          <div className="w-10/12 h-full flex flex-row justify-between gap-10 xxxs:flex-col xxxs:w-11/12 xxxs:gap-5 xxs:gap-6 xs:w-10/12 sm:w-11/12 sm:flex-col sm:gap-6 md:w-10/12 lg:flex-row lg:gap-8 xl:gap-10 2xl:max-w-[1440px]">
-            <div className="sl-agency-1 w-[50%] flex justify-center items-center rounded-3xl overflow-hidden xxxs:w-full xxxs:rounded-2xl sm:w-full">
-              <img className="w-full h-full object-cover" src={WorkImage} alt="" />
-            </div>
-            <div className=" w-[50%] flex flex-col justify-between items-center gap-12 xxxs:w-full sm:w-full lg:gap-8 xl:gap-12 2xl:gap-14">
-              <div className="w-full flex flex-col justify-between items-start gap-6 xxxs:hidden sm:hidden lg:flex lg:gap-5 xl:gap-6 2xl:gap-7">
-                <div className="sl-agency-2 flex flex-row justify-center font-bodyfont gap-1 items-center py-2 px-4 bg-badgeBG/5 rounded-lg text-badgeText border border-badgeText text-sm lg:text-[12px] lg:py-1 lg:px-3 2xl:text-[16px] 2xl:px-6">
-                  <RiBox3Fill />
-                  <p>OUR WORK</p>
-                </div>
-                <div className="flex flex-col justify-between items-start gap-3 lg:gap-3 2xl:gap-4">
-                  <p className="sl-agency-3 text-4xl font-semibold lg:text-[32px] xl:text-4xl 2xl:text-[40px]">What’s Different In Our Agency</p>
-                  <p className="sl-agency-4 font-bodyfont text-[18px] text-textDescription lg:text-sm xl:text-lg 2xl:text-xl">Delivering web, app, and design solutions that empower your brand and captivate your audience.</p>
-                </div> 
-              </div>
-              <div className="w-full grid grid-cols-2 gap-4 2xl:gap-5 xxxs:grid-cols-1 sm:grid-cols-2 xl:gap-4">
-                <div className="sl-agency-5 flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border xxxs:p-4 xxs:p-5 xs:p-6 lg:p-4 lg:gap-3 xl:gap-4 xl:p-5 2xl:gap-5">
-                  <div className="flex justify-center items-center "><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon1} alt="" /></div>
-                  <div className="flex flex-col justify-between items-start gap-1">
-                    <p className="font-semibold text-lg lg:text-[16px] xl:text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
-                  </div>
-                </div>
-                <div className="sl-agency-5 flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border xxxs:p-4 xxs:p-5 xs:p-6 lg:p-4 lg:gap-3 xl:gap-4 xl:p-5 2xl:gap-5">
-                  <div className="flex justify-center items-center"><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon2} alt="" /></div>
-                  <div className="flex flex-col justify-between items-start gap-1">
-                    <p className="font-semibold text-lg lg:text-[16px] xl:text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
-                  </div>
-                </div>
-                <div className="sl-agency-6 flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border xxxs:p-4 xxs:p-5 xs:p-6 lg:p-4 lg:gap-3 xl:gap-4 xl:p-5 2xl:gap-5">
-                  <div className="flex justify-center items-center"><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon3} alt="" /></div>
-                  <div className="flex flex-col justify-between items-start gap-1">
-                    <p className="font-semibold text-lg lg:text-[16px] xl:text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
-                  </div>
-                </div>
-                <div className="sl-agency-6 flex flex-col justify-between items-start gap-4 p-5 bg-cardBg rounded-2xl border border-border xxxs:p-4 xxs:p-5 xs:p-6 lg:p-4 lg:gap-3 xl:gap-4 xl:p-5 2xl:gap-5">
-                  <div className="flex justify-center items-center"><img className="w-9 h-9 2xl:w-10 2xl:h-10" src={AgencyIcon4} alt="" /></div>
-                  <div className="flex flex-col justify-between items-start gap-1">
-                    <p className="font-semibold text-lg lg:text-[16px] xl:text-lg 2xl:text-xl">Responsive</p>
-                    <p className="font-bodyfont text-textDescription text-sm">Understand client goals and project requirements</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        <Agency />
+        <Agency badgeicon={!isDarkMode ? ProcessBadgeDark : ProcessBadgeLight} />
         <div className="sl-cta w-full h-full flex justify-center items-center xxxs:my-14 sm:my-16 lg:my-20">
             <div className="sl-cta-1 flex justify-start xxxs:w-11/12 xxxs:rounded-xl xxxs:px-7 xxxs:py-20 sm:w-11/12 sm:p-14 sm:rounded-3xl sm:justify-center md:w-10/12 lg:w-10/12 lg:rounded-3xl lg:py-14 xl:py-16 2xl:max-w-[1440px]" 
             style={{
@@ -297,7 +279,7 @@ const Home = () => {
             </div>
         </div>
         <div className="sl-testimonial w-full flex flex-col justify-between items-center gap-20 my-24 xxxs:my-14 xxs:my-16 xs:my-20 sm:my-14 xl:gap-20 xl:my-24 2xl:my-28 2xl:gap-24">
-          <HeadingBlock className={"sl-testimonial-1"} badgeheading={"OUR WORK"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
+          <HeadingBlock className={"sl-testimonial-1"} badgeicon={!isDarkMode ? TestimonialBadgeDark : TestimonialBadgeLight} badgeheading={"TESTIMONIAL"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
           <div className="TestimonialsDiv sl-testimonial-2 w-10/12 h-[600px] flex flex-row justify-between items-center gap-5 overflow-hidden xxxs:w-11/12 xxxs:flex-col xxxs:h-fit xxxs:gap-4 xs:w-10/12 sm:w-11/12 sm:gap-4 md:w-10/12 md:max-w-[740px] lg:w-10/12 lg:max-w-full xl:gap-5 xl:max-w-[1100px] 2xl:max-w-[1200px]">
             <div className="overflow-hidden h-full">
               <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
@@ -311,7 +293,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full flex flex-col justify-between items-center gap-20 my-24 xxxs:my-14 xxxs:gap-14 xxs:my-16 xxs:gap-16 xs:my-20 sm:my-16 xl:gap-20 xl:my-24">
-          <HeadingBlock badgeheading={"CONTACT US"} mainheading={"Let’s Work Together"} />
+          <HeadingBlock badgeheading={"CONTACT US"} badgeicon={!isDarkMode ? ContactBadgeDark : ContactBadgeLight} mainheading={"Let’s Work Together"} />
           <div className="w-10/12 flex flex-col justify-between items-center gap-5 xxxs:w-11/12 xxxs:gap-7 xxs:gap-9 xs:w-10/12 sm:w-11/12 md:w-10/12 xl:gap-5 2xl:max-w-[1440px]">
             <ContactCards />
             <ContactForm />

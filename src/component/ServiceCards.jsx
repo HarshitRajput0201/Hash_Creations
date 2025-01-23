@@ -29,7 +29,7 @@ const ServiceCards = () => {
             ServiceCardsData.map((cardData, index) => (
                 <div className="sl-serviceCard container bg-border w-full flex justify-center items-center rounded-2xl relative overflow-hidden shadow-default xxxs:rounded-2xl sm:rounded-2xl xl:rounded-[24px] xl:min-h-[300px] lg:p-[1px]" key={index}>
                     <div className="gradient-bg absolute inset-0 z-0 xxxs:hidden sm:hidden lg:flex lg:rounded-2xl xl:rounded-3xl"></div>
-                    <div className="s-card w-full h-full flex flex-col justify-between gap-6 rounded-3xl p-7 border border-border bg-cardBg transition-all backdrop-blur-md relative xxxs:p-4 xxxs:rounded-2xl xs:p-6 xs:gap-8 sm:rounded-2xl sm:p-5 lg:p-5 lg:border-transparent xl:rounded-3xl 2xl:gap-10 2xl:p-8">
+                    <div className="s-card w-full h-full flex flex-col justify-between gap-6 rounded-3xl p-7 border border-border bg-cardBg transition-all relative xxxs:p-4 xxxs:rounded-2xl xs:p-6 xs:gap-8 sm:rounded-2xl sm:p-5 lg:p-5 lg:border-transparent xl:rounded-3xl 2xl:gap-10 2xl:p-8">
                         <div className="flex flex-col justify-between items-center gap-4 xs:gap-6 sm:gap-4 lg:gap-4 2xl:gap-5">
                             <div className="w-full flex flex-col justify-between items-start gap-2 2xl:gap-3 sm:gap-1">
                                 <p className="text-[28px] font-semibold xxxs:text-2xl xxs:text-[28px] xs:text-[32px] sm:text-2xl lg:text-[22px] xl:text-[28px] 2xl:text-[32px]">{cardData.name}</p>

@@ -9,39 +9,19 @@ import NavBarIconLight from "../assets/navBarIconLight.svg";
 import NavBarIconDark from "../assets/navBarIconDark.svg";
 import NavCrossIconLight from "../assets/navCrossIconLight.svg";
 import NavCrossIconDark from "../assets/navCrossIconDark.svg";
+import PropTypes from "prop-types";
 
 
 
 
 
-const NavBar = () => {
 
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Initialize theme based on localStorage or system preference
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      return storedTheme === "dark";
-    }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
+const NavBar = ({isDarkMode, toggleTheme}) => {
+
+  
 
   const [activeSection, setActiveSection] = useState('home');
 
-  const toggleTheme = () => {
-    setIsDarkMode((prev) => !prev);
-  };
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDarkMode]);
 
   useEffect(() => {
     const divs = document.querySelectorAll('div[id]'); // Select all divs with an id attribute
@@ -158,3 +138,7 @@ const NavBar = () => {
 
 export default NavBar;
 
+NavBar.propTypes = {
+  toggleTheme: PropTypes.func.isRequired,
+  isDarkMode: PropTypes.bool.isRequired,
+  };
