@@ -129,6 +129,17 @@ const Home = () => {
       "-=0.7" // Overlap with Button animation
     );
 
+    herotl.from(
+      ".hero-bg-img-5",
+      {
+        y: -30,
+        opacity: 0,
+        duration: 2,
+        ease: "power2.out",
+      },
+      "-=1" // Overlap with Button animation
+    );
+
     const servicetl = gsap.timeline({
       scrollTrigger: {
         trigger: ".sl-service", // Trigger animations for section-2
@@ -221,8 +232,8 @@ const Home = () => {
       <div className="flex flex-col items-center w-full relative z-10" >
         <div className="absolute w-full h-[300px] z-0 xxxs:h-[170px] sm:h-[280px] lg:h-[240px] xl:h-[300px]" id="home"><img className="absolute w-full h-[300px] z-0 object-cover xxxs:h-[170px] sm:h-[280px] lg:h-[240px] xl:h-[300px]"  src={HeroBG1} alt="HeroBG1" /></div>
         <img className="absolute w-full h-[300px] top-[500px] object-cover z-0 xxs:top-[580px] xxxs:h-[170px] xs:top-[680px] sm:h-[180px] sm:top-[620px] md:h-[220px] md:top-[580px] lg:top-[440px] xl:top-[480px] xl:h-[360px]" src={HeroBG2} alt="HeroBG2" />
-        <img className="absolute left-0 z-0 xxxs:h-[170px] xxs:h-[190px] sm:h-[220px] lg:h-[320px]" src={HeroLeftCornerBG} alt="HeroLeftCornerBG" />
-        <img className="absolute right-0 z-0 xxxs:h-[170px] xxs:h-[190px] sm:h-[220px] lg:h-[320px]" src={HeroRightCornerBG} alt="HeroRightCornerBG" />
+        <img className="hero-bg-img-5 absolute left-0 z-0 xxxs:h-[170px] xxs:h-[190px] sm:h-[220px] lg:h-[320px]" src={HeroLeftCornerBG} alt="HeroLeftCornerBG" />
+        <img className="hero-bg-img-5 absolute right-0 z-0 xxxs:h-[170px] xxs:h-[190px] sm:h-[220px] lg:h-[320px]" src={HeroRightCornerBG} alt="HeroRightCornerBG" />
         <NavBar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <div className="flex flex-col w-10/12 mt-36 z-10 xxxs:w-11/12 xxxs:mt-20 xxs:mt-24 xs:w-10/12 xs:mt-28 sm:w-11/12 sm:mt-28 md:w-10/12 lg:mt-32 xl:mt-36 2xl:max-w-[1440px] 2xl:mt-40">
           <div className="w-full flex flex-col justify-between items-center gap-16 xxxs:items-start xs:gap-20 sm:gap-12 lg:gap-20 xl:gap-16  2xl:gap-20">
@@ -267,11 +278,11 @@ const Home = () => {
                       backgroundPosition: 'center',
                   }}>
               <div className="z-10 h-full flex flex-col justify-center xxxs:gap-6 sm:gap-12 lg:items-center lg:gap-10 2xl:max-w-[1100px]">
-                <p className="sl-cta-2 text-white font-semibold capitalize xxxs:text-left xxxs:text-3xl xxs:text-[32px] xs:text-4xl sm:text-5xl sm:leading-tight sm:text-center lg:text-center lg:text-5xl lg:leading-snug xl:text-[52px] xl:leading-normal 2xl:leading-snug 2xl:text-6xl">Have a Vision for an App or Platform that can make a difference?</p>
+                <p className="sl-cta-2 text-white font-semibold capitalize xxxs:text-left xxxs:text-3xl xxs:text-[32px] xs:text-4xl sm:text-5xl sm:leading-tight sm:text-center lg:text-center lg:text-5xl lg:leading-snug xl:text-[52px] xl:leading-normal 2xl:leading-snug 2xl:text-6xl">Got an Idea? Let’s Make It Awesome Together — Click to Start!</p>
                 <div className="flex justify-center items-center xxxs:justify-start">
                   <a href="/">
                     <div className="sl-cta-3 text-lg bg-white text-black xxxs:text-base xxxs:rounded-md xxxs:px-10 xxxs:py-1 sm:text-xl sm:py-2 sm:px-12 sm:rounded-lg lg:px-12 lg:py-2 lg:rounded-lg">
-                      Book a Call
+                    Build Now
                     </div>
                   </a>
                 </div>
@@ -279,7 +290,7 @@ const Home = () => {
             </div>
         </div>
         <div className="sl-testimonial w-full flex flex-col justify-between items-center gap-20 my-24 xxxs:my-14 xxs:my-16 xs:my-20 sm:my-14 xl:gap-20 xl:my-24 2xl:my-28 2xl:gap-24">
-          <HeadingBlock className={"sl-testimonial-1"} badgeicon={!isDarkMode ? TestimonialBadgeDark : TestimonialBadgeLight} badgeheading={"TESTIMONIAL"} mainheading={"Explore Our "} mainspan={"Portfolio"} description={"Delivering web, app, and design solutions that empower your brand and captivate your audience."} />
+          <HeadingBlock className={"sl-testimonial-1"} badgeicon={!isDarkMode ? TestimonialBadgeDark : TestimonialBadgeLight} badgeheading={"TESTIMONIALS"} mainheading={"See What Our Clients Say"} mainspan={""} description={"Remarkable Stories That Showcase the Magic of Collaboration and Shared Success!"} />
           <div className="TestimonialsDiv sl-testimonial-2 w-10/12 h-[600px] flex flex-row justify-between items-center gap-5 overflow-hidden xxxs:w-11/12 xxxs:flex-col xxxs:h-fit xxxs:gap-4 xs:w-10/12 sm:w-11/12 sm:gap-4 md:w-10/12 md:max-w-[740px] lg:w-10/12 lg:max-w-full xl:gap-5 xl:max-w-[1100px] 2xl:max-w-[1200px]">
             <div className="overflow-hidden h-full">
               <TestimonialBlock TestimonialsData={TestimonialsData} direction="down"/>
@@ -292,12 +303,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-between items-center gap-20 my-24 xxxs:my-14 xxxs:gap-14 xxs:my-16 xxs:gap-16 xs:my-20 sm:my-16 xl:gap-20 xl:my-24">
-          <HeadingBlock badgeheading={"CONTACT US"} badgeicon={!isDarkMode ? ContactBadgeDark : ContactBadgeLight} mainheading={"Let’s Work Together"} />
+        {/* <div className="w-full flex flex-col justify-between items-center gap-20 my-24 xxxs:my-14 xxxs:gap-14 xxs:my-16 xxs:gap-16 xs:my-20 sm:my-16 xl:gap-20 xl:my-24">
+          <HeadingBlock badgeheading={"CONTACT US"} badgeicon={!isDarkMode ? ContactBadgeDark : ContactBadgeLight} mainheading={"Hey! We are ready to consult you"} />
           <div className="w-10/12 flex flex-col justify-between items-center gap-5 xxxs:w-11/12 xxxs:gap-7 xxs:gap-9 xs:w-10/12 sm:w-11/12 md:w-10/12 xl:gap-5 2xl:max-w-[1440px]">
             <ContactCards />
             <ContactForm />
-            <footer className="w-full flex flex-row justify-between items-center px-10 py-4 gap-6 border border-border rounded-3xl bg-cardBg shadow-default xxxs:border-none xxxs:bg-background xxxs:flex-col-reverse xxxs:p-0 xxxs:shadow-none sm:px-5 sm:py-2 sm:rounded-2xl xl:px-10 xl:py-4 xl:gap-6 xl:rounded-3xl">
+            <div className='w-full flex justify-center items-center relative overflow-hidden bg-border rounded-3xl shadow-default sm:rounded-2xl lg:p-[1px] xl:rounded-3xl'>
+            <div className="gradient-bg absolute inset-0 z-0 xxxs:hidden sm:hidden lg:flex lg:rounded-2xl xl:rounded-3xl"></div>
+            <footer className="w-full z-10 flex flex-row justify-between items-center px-10 py-4 gap-6 rounded-3xl bg-cardBg shadow-default xxxs:border-none xxxs:bg-background xxxs:flex-col-reverse xxxs:p-0 xxxs:shadow-none sm:px-5 sm:py-2 sm:rounded-2xl xl:px-10 xl:py-4 xl:gap-6 xl:rounded-3xl">
               <p className="text-textDescription xxxs:text-center xxxs:text-sm sm:text-sm xl:text-base">All Copyrights Reserved By Aeriesys Tech 2024 </p>
               <div className="flex flex-row justify-between items-center gap-2">
                 <Link to={"/"}> 
@@ -314,8 +327,9 @@ const Home = () => {
                 </Link>
               </div>
             </footer>
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

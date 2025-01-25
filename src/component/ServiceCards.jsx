@@ -6,15 +6,44 @@ import ServiceCardsData from "../data/ServiceCardData.js";
 const ServiceCards = () => {
 
     useEffect(() => {
+        // const handleMouseMove = (e) => {
+        //     const gradients = document.querySelectorAll('.gradient-bg');
+        //     gradients.forEach((gradient) => {
+        //       const rect = gradient.getBoundingClientRect();
+        //       const x = e.clientX - rect.left;
+        //       const y = e.clientY - rect.top;
+          
+        //       // Calculate gradient size dynamically based on card size
+        //       const width = rect.width;
+        //       const height = rect.height;
+        //       const gradientSize = Math.max(width, height) * 0.8; // Adjust multiplier as needed
+          
+        //       // Apply a consistent gradient size
+        //       gradient.style.background = `radial-gradient(circle at ${x}px ${y}px, 
+        //         rgba(131, 86, 251, 1) 1%, 
+        //         rgba(148, 108, 255, 1) ${gradientSize * 0.2}px, 
+        //         rgba(121, 83, 223, 1) ${gradientSize * 0.5}px, 
+        //         transparent ${gradientSize}px)`;
+        //     });
+        //   };
         const handleMouseMove = (e) => {
-          const gradients = document.querySelectorAll('.gradient-bg');
-          gradients.forEach((gradient) => {
-            const rect = gradient.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            gradient.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(131, 86, 251, 1) 1%, rgba(148, 108, 255, 1) 13%, rgba(121, 83, 223, 1) 25%, transparent 50%)`;
-          });
-        };
+            const gradients = document.querySelectorAll('.gradient-bg');
+            gradients.forEach((gradient) => {
+              const rect = gradient.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+          
+              // Set a fixed gradient size, for example, 200px
+              const gradientSize = 200;
+          
+              // Apply a fixed gradient size
+              gradient.style.background = `radial-gradient(circle at ${x}px ${y}px, 
+                rgba(131, 86, 251, 1) 1%, 
+                rgba(148, 108, 255, 1) ${gradientSize * 0.2}px, 
+                rgba(121, 83, 223, 1) ${gradientSize * 0.5}px, 
+                transparent ${gradientSize}px)`;
+            });
+          };
     
         document.addEventListener('mousemove', handleMouseMove);
     

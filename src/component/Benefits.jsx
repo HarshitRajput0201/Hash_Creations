@@ -59,9 +59,10 @@ const Benefits = ({badgeicon}) => {
           {/* Benefits Grid */}
           <div className="w-full grid grid-cols-2 gap-4 xxxs:gap-3 xxxs:grid-cols-1 xxs:gap-4 xs:gap-5 sm:grid-cols-2 lg:grid-cols-2 2xl:gap-5">
             {benefitsData.map((benefit, index) => (
-              <div
-                key={index}
-                className="sl-benefits-5 flex flex-row justify-start items-center gap-4 p-4 bg-cardBg rounded-2xl border border-border xxxs:items-start xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:items-center sm:justify-start sm:p-3 lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5"
+              <div className='sl-benefits-5 flex justify-center items-center relative overflow-hidden shadow-default rounded-2xl bg-border lg:p-[1px]' key={index}>
+                <div className="gradient-bg absolute inset-0 z-0 xxxs:hidden sm:hidden lg:flex lg:rounded-2xl xl:rounded-2xl bg-background"></div>
+                <div
+                className="w-full h-full z-10 flex flex-row justify-start items-center gap-4 border p-4 bg-cardBg rounded-2xl xxxs:items-start xxxs:border-border xxxs:justify-start xxxs:gap-4 xxxs:p-3 xxs:p-4 xs:p-5 sm:items-center sm:border-border sm:justify-start sm:p-3 lg:border-none lg:p-3 lg:gap-3 lg:flex-row lg:items-center xl:p-4 2xl:gap-5"
               >
                 <div className="flex justify-center items-center p-3 bg-workIconBg rounded-lg border border-border xxxs:p-2 sm:p-3 lg:p-2 xl:p-3">
                   <img
@@ -75,6 +76,7 @@ const Benefits = ({badgeicon}) => {
                   <div className="text-textDescription lg:text-[10px] xl:text-[12px] 2xl:text-sm">
                     {benefit.description}
                   </div>
+                </div>
                 </div>
               </div>
             ))}

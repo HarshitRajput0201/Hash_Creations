@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 
 const PortfolioCard = ({imageURL, cardName, cardDescription, cardLink}) => {
   return (
-    <div className="flex flex-col w-full justify-between items-center gap-5 p-5 rounded-3xl border border-border bg-cardBg shadow-default xxxs:rounded-2xl xxxs:p-3 xxxs:gap-3 xxs:p-4 xxs:gap-4 xs:gap-6 xs:p-5 sm:rounded-2xl sm:p-4 sm:gap-4 xl:gap-5 xl:p-5 xl:rounded-3xl 2xl:p-6" style={{ aspectRatio: '14/10' }}>
+    <div className='flex justify-center items-center relative overflow-hidden xxxs:rounded-2xl sm:rounded-2xl xl:rounded-3xl bg-border shadow-default lg:p-[1px]'>
+      <div className="gradient-bg absolute inset-0 z-0 xxxs:hidden sm:hidden lg:flex lg:rounded-2xl xl:rounded-3xl"></div>
+      <div className="flex flex-col z-10 w-full justify-between items-center border gap-5 p-5 rounded-3xl bg-cardBg shadow-default xxxs:border-border xxxs:rounded-2xl xxxs:p-3 xxxs:gap-3 xxs:p-4 xxs:gap-4 xs:gap-6 xs:p-5 sm:border-border sm:rounded-2xl sm:p-4 sm:gap-4 lg:border-none xl:gap-5 xl:p-5 xl:rounded-3xl 2xl:p-6" style={{ aspectRatio: '14/10' }}>
       <div className="w-full flex justify-center items-center">
         <img className="w-full h-full rounded-2xl object-cover xxxs:rounded-lg sm:rounded-lg xl:rounded-xl" style={{ aspectRatio: '18/10' }} src={imageURL} alt={imageURL} />
       </div>
@@ -19,6 +21,7 @@ const PortfolioCard = ({imageURL, cardName, cardDescription, cardLink}) => {
             </Link>
         </div>
       </div>
+    </div>
     </div>
   )
 }

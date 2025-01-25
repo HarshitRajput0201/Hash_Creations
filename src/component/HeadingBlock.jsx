@@ -1,11 +1,45 @@
 import PropTypes from "prop-types";
+import { useEffect } from 'react';
+
 
 const HeadingBlock = ({className, badgeicon, badgeheading, mainheading, mainspan, description}) => {
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+        const gradients = document.querySelectorAll('.badge-bg');
+        gradients.forEach((gradient) => {
+          const rect = gradient.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+      
+          // Calculate gradient size dynamically based on card size
+          const width = rect.width;
+          const height = rect.height;
+          const gradientSize = Math.max(width, height) * 0.8; // Adjust multiplier as needed
+      
+          // Apply a consistent gradient size
+          gradient.style.background = `radial-gradient(circle at ${x}px ${y}px, 
+            rgb(0, 188, 180) 1%, 
+            rgba(0, 188, 180, 0.8) ${gradientSize * 0.2}px, 
+            rgba(196, 232, 107, 0.8) ${gradientSize * 0.5}px, 
+            transparent ${gradientSize}px)`;
+        });
+      };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
   return (
     <div className={`w-6/12 flex flex-col justify-between items-center text-center gap-4 xxxs:w-11/12 xs:w-10/12 sm:w-9/12 md:w-8/12 lg:w-7/12 2xl:max-w-[780px]`} >
-      <div className={`${className}-head-badge flex flex-row justify-center gap-1 items-center py-2 px-4 bg-badgeBG rounded-full text-badgeText border border-border text-sm xxxs:text-[12px] xxxs:py-1 xs:text-[12px] xs:py-1 sm:text-[12px] sm:py-1 lg:text-[12px] lg:px-3 lg:py-1 xl:py-1 xl:px-4 2xl:gap-2 2xl:text-[16px] 2xl:px-6 2xl:py-3`}>
-        <div className="flex justify-center items-center"><img className="text-black 2xl:h-4 2xl:w-4" src={badgeicon} alt="" /></div>
-        <p>{badgeheading}</p>
+      <div className="flex justify-center items-center rounded-full relative overflow-hidden lg:p-[1px] glow-effect" >
+        <div className="gradient-bg absolute inset-0 z-0 xxxs:hidden sm:hidden lg:flex lg:rounded-2xl xl:rounded-3xl"></div>
+        <div className={`${className}-head-badge flex flex-row justify-center gap-1 items-center py-2 px-4 bg-badgeBG rounded-full text-badgeText border border-transparent text-sm xxxs:text-[12px] xxxs:py-1 xs:text-[12px] xs:py-1 sm:text-[12px] sm:py-1 lg:text-[12px] lg:px-3 lg:py-1 xl:py-1 xl:px-4 2xl:gap-2 2xl:text-[16px] 2xl:px-6 2xl:py-3`}>
+          <div className="flex justify-center items-center"><img className="2xl:h-4 2xl:w-4" src={badgeicon} alt="" /></div>
+          <p>{badgeheading}</p>
+        </div>
       </div>
       <p className={`${className}-head-heading text-5xl font-semibold 2xl:text-[52px] xxxs:text-2xl xs:text-[28px] sm:text-[28px] lg:text-[42px] xl:text-5xl`}>
         {mainheading} <span className=" bg-headingGradient text-transparent bg-clip-text font-normal">{mainspan}</span>
